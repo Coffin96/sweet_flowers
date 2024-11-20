@@ -14,3 +14,16 @@
 13 silly idealTree buildDeps
 14 silly fetch manifest axios@^0.21.1
 15 silly packumentCache full:https://registry.npmjs.org/axios cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/axios 401ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/axios set size:undefined disposed:false
+18 silly fetch manifest gsap@^3.7.1
+19 silly packumentCache full:https://registry.npmjs.org/gsap cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/gsap 42ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/gsap set size:undefined disposed:false
+22 silly fetch manifest react-router-dom@*
+23 silly packumentCache full:https://registry.npmjs.org/react-router-dom cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/react-router-dom 60ms (cache miss)
+25 silly packumentCache full:https://registry.npmjs.org/react-router-dom set size:undefined disposed:false
+26 silly fetch manifest react@^17.0.2
+27 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+28 http fetch GET 200 https://registry.npmjs.org/react 58ms (cache revalidated)
