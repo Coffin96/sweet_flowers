@@ -1,56 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import ProductList from './ProductList';
-import Cart from './Cart';
 import Header from './Header';
 import Footer from './Footer';
+import ProductList from './ProductList';
+import Cart from './Cart';
+import Slider from './Slider';
+import ReviewSystem from './ReviewSystem';
+import OrderForm from './OrderForm';
+import ProductManager from '../utils/ProductManager';
 import '../styles/App.scss';
 
 function App() {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     useEffect(() => {
-        // Імітація завантаження продуктів
-        const mockProducts = [
-            { id: 1, name: 'Букет "Рожева мрія"', price: 500, image: 'path_to_image_1.jpg' },
-            { id: 2, name: 'Букет "Ніжність"', price: 450, image: 'path_to_image_2.jpg' },
-            { id: 3, name: 'Букет "Святковий"', price: 600, image: 'path_to_image_3.jpg' },
-        ];
-        setProducts(mockProducts);
+        const productManager = new ProductManager();
+        productManager.fetchProducts().then(setProducts);
     }, []);
 
     const handleAddToCart = (product) => {
         setCart(prevCart => [...prevCart, product]);
     };
 
+    const handleQuickView = (product) => {
+        setSelectedProduct(product);
+    };
+
     return (
         <div className="app-container">
             <Header />
             <main>
-                <section id="home">
-                    <h1>Sweet Flowers</h1>
-                    <p className="slogan">Солодкі букети для особливих моментів</p>
-                    <a href="#products" className="cta-button">Замовити букет</a>
-                </section>
-
+                <Slider />
                 <section id="about">
                     <h2>Про нас</h2>
                     <p>Sweet Flowers - це унікальний магазин, де ми створюємо неповторні букети з зефіру. Наші букети - це ідеальний подарунок для тих, хто цінує оригінальність та солодкі сюрпризи.</p>
                 </section>
-
                 <section id="products">
                     <h2>Наші букети</h2>
                     <ProductList 
                         products={products} 
-                        onAddToCart={handleAddToCart} 
+                        onAddToCart={handleAddToCart}
+                        onQuickView={handleQuickView}
                     />
                 </section>
-
                 <section id="cart">
                     <h2>Кошик</h2>
                     <Cart items={cart} />
                 </section>
-
+                {selectedProduct && (
+                    <section id="product-details">
+                        <h2>{selectedProduct.name}</h2>
+                        <img src={selectedProduct.imageUrl} alt={selectedProduct.name} />
+                        <p>{selectedProduct.description}</p>
+                        <p>Ціна: {selectedProduct.price} грн</p>
+                        <ReviewSystem productId={selectedProduct.id} />
+                    </section>
+                )}
+                <section id="order">
+                    <h2>Оформлення замовлення</h2>
+                    <OrderForm cart={cart} />
+                </section>
                 <section id="contacts">
                     <h2>Зв'яжіться з нами</h2>
                     <div className="contact-info">
