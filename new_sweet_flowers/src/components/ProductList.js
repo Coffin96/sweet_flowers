@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ProductManager from '../utils/ProductManager';
 import '../styles/ProductList.scss';
 
-const ProductList = ({ products, onAddToCart, onQuickView }) => {
+const ProductList = ({ onAddToCart, onQuickView }) => {
+    const [products, setProducts] = useState([]);
+    const productManager = new ProductManager();
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        const fetchedProducts = await productManager.fetchProducts();
+        setProducts(fetchedProducts);
+    };
+
     return (
         <div className="product-list">
             {products.map((product) => (
