@@ -39,7 +39,7 @@ const authenticateJWT = (req, res, next) => {
 
 // ... (попередній код залишається без змін)
 
-// API маршрути для відгуків
+// Оновлені API маршрути для відгуків
 
 // Отримати відгуки для продукту
 app.get('/api/products/:productId/reviews', async (req, res) => {
@@ -69,6 +69,43 @@ app.post('/api/products/:productId/reviews', async (req, res) => {
     } catch (error) {
         console.error('Error creating review', error);
         res.status(400).json({ error: 'Error creating review' });
+    }
+});
+
+// Редагувати відгук (тільки для адміністратора)
+app.put('/api/admin/reviews/:reviewId', authenticateJWT, async (req, res) => {
+    try {
+        const { rating, comment, author } = req.body;
+        const [updated] = await Review.update(
+            { rating, comment, author },
+            { where: { id: req.params.reviewId } }
+        );
+        if (updated) {
+            const updatedReview = await Review.findByPk(req.params.reviewId);
+            res.json(updatedReview);
+        } else {
+            res.status(404).json({ error: 'Review not found' });
+        }
+    } catch (error) {
+        console.error('Error updating review', error);
+        res.status(400).json({ error: 'Error updating review' });
+    }
+});
+
+// Видалити відгук (тільки для адміністратора)
+app.delete('/api/admin/reviews/:reviewId', authenticateJWT, async (req, res) => {
+    try {
+        const deleted = await Review.destroy({
+            where: { id: req.params.reviewId }
+        });
+        if (deleted) {
+            res.status(204).send();
+        } else {
+            res.status(404).json({ error: 'Review not found' });
+        }
+    } catch (error) {
+        console.error('Error deleting review', error);
+        res.status(500).json({ error: 'Error deleting review' });
     }
 });
 
