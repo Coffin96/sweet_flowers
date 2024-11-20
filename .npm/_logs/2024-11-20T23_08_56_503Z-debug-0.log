@@ -1701,3 +1701,148 @@
 867 http fetch GET 200 https://registry.npmjs.org/selfsigned 42ms (cache hit)
 868 silly packumentCache corgi:https://registry.npmjs.org/selfsigned set size:31119 disposed:false
 869 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns cache-miss
+870 http fetch GET 200 https://registry.npmjs.org/multicast-dns 80ms (cache hit)
+871 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns set size:33661 disposed:false
+872 silly packumentCache corgi:https://registry.npmjs.org/bonjour cache-miss
+873 http fetch GET 200 https://registry.npmjs.org/bonjour 58ms (cache hit)
+874 silly packumentCache corgi:https://registry.npmjs.org/bonjour set size:8131 disposed:false
+875 http fetch GET 200 https://registry.npmjs.org/@types/validator/-/validator-13.12.2.tgz 1917ms (cache miss)
+876 http fetch GET 200 https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.46.tgz 1933ms (cache miss)
+877 http fetch GET 200 https://registry.npmjs.org/sqlite3/-/sqlite3-5.1.7.tgz 2087ms (cache miss)
+878 http fetch GET 200 https://registry.npmjs.org/validator/-/validator-13.12.0.tgz 2170ms (cache miss)
+879 http fetch GET 200 https://registry.npmjs.org/node-gyp/-/node-gyp-8.4.1.tgz 2179ms (cache miss)
+880 http fetch GET 200 https://registry.npmjs.org/sequelize/-/sequelize-6.37.5.tgz 2407ms (cache miss)
+881 http fetch GET 200 https://registry.npmjs.org/moment/-/moment-2.30.1.tgz 2502ms (cache miss)
+882 info run sqlite3@5.1.7 install node_modules/sqlite3 prebuild-install -r napi || node-gyp rebuild
+883 info run sqlite3@5.1.7 install { code: 0, signal: null }
+884 silly ADD node_modules/indent-string
+885 silly ADD node_modules/clean-stack
+886 silly ADD node_modules/aggregate-error
+887 silly ADD node_modules/imurmurhash
+888 silly ADD node_modules/unique-slug
+889 silly ADD node_modules/ieee754
+890 silly ADD node_modules/base64-js
+891 silly ADD node_modules/buffer
+892 silly ADD node_modules/fs-constants
+893 silly ADD node_modules/bl
+894 silly ADD node_modules/tar-stream
+895 silly ADD node_modules/sprintf-js
+896 silly ADD node_modules/jsbn
+897 silly ADD node_modules/smart-buffer
+898 silly ADD node_modules/ip-address
+899 silly ADD node_modules/socks
+900 silly ADD node_modules/mimic-response
+901 silly ADD node_modules/simple-concat
+902 silly ADD node_modules/decompress-response
+903 silly ADD node_modules/strip-json-comments
+904 silly ADD node_modules/ini
+905 silly ADD node_modules/deep-extend
+906 silly ADD node_modules/err-code
+907 silly ADD node_modules/tunnel-agent
+908 silly ADD node_modules/tar-fs
+909 silly ADD node_modules/tar-fs/node_modules/chownr
+910 silly ADD node_modules/simple-get
+911 silly ADD node_modules/rc
+912 silly ADD node_modules/node-abi
+913 silly ADD node_modules/node-abi/node_modules/semver
+914 silly ADD node_modules/napi-build-utils
+915 silly ADD node_modules/mkdirp-classic
+916 silly ADD node_modules/github-from-package
+917 silly ADD node_modules/expand-template
+918 silly ADD node_modules/wide-align
+919 silly ADD node_modules/has-unicode
+920 silly ADD node_modules/color-support
+921 silly ADD node_modules/aproba
+922 silly ADD node_modules/delegates
+923 silly ADD node_modules/gauge
+924 silly ADD node_modules/gauge/node_modules/is-fullwidth-code-point
+925 silly ADD node_modules/gauge/node_modules/emoji-regex
+926 silly ADD node_modules/gauge/node_modules/string-width
+927 silly ADD node_modules/console-control-strings
+928 silly ADD node_modules/are-we-there-yet
+929 silly ADD node_modules/abbrev
+930 silly ADD node_modules/minizlib
+931 silly ADD node_modules/minizlib/node_modules/yallist
+932 silly ADD node_modules/minipass-sized
+933 silly ADD node_modules/encoding
+934 silly ADD node_modules/encoding/node_modules/iconv-lite
+935 silly ADD node_modules/agent-base
+936 silly ADD node_modules/@tootallnate/once
+937 silly ADD node_modules/@gar/promisify
+938 silly ADD node_modules/unique-filename
+939 silly ADD node_modules/promise-inflight
+940 silly ADD node_modules/infer-owner
+941 silly ADD node_modules/fs-minipass
+942 silly ADD node_modules/chownr
+943 silly ADD node_modules/@npmcli/move-file
+944 silly ADD node_modules/@npmcli/move-file/node_modules/rimraf
+945 silly ADD node_modules/@npmcli/move-file/node_modules/mkdirp
+946 silly ADD node_modules/@npmcli/fs
+947 silly ADD node_modules/@npmcli/fs/node_modules/semver
+948 silly ADD node_modules/humanize-ms
+949 silly ADD node_modules/ssri
+950 silly ADD node_modules/socks-proxy-agent
+951 silly ADD node_modules/promise-retry
+952 silly ADD node_modules/minipass-pipeline
+953 silly ADD node_modules/minipass-flush
+954 silly ADD node_modules/minipass-fetch
+955 silly ADD node_modules/minipass-collect
+956 silly ADD node_modules/minipass
+957 silly ADD node_modules/minipass/node_modules/yallist
+958 silly ADD node_modules/is-lambda
+959 silly ADD node_modules/https-proxy-agent
+960 silly ADD node_modules/http-proxy-agent
+961 silly ADD node_modules/http-cache-semantics
+962 silly ADD node_modules/cacache
+963 silly ADD node_modules/cacache/node_modules/yallist
+964 silly ADD node_modules/cacache/node_modules/rimraf
+965 silly ADD node_modules/cacache/node_modules/p-map
+966 silly ADD node_modules/cacache/node_modules/mkdirp
+967 silly ADD node_modules/cacache/node_modules/lru-cache
+968 silly ADD node_modules/agentkeepalive
+969 silly ADD node_modules/npmlog
+970 silly ADD node_modules/nopt
+971 silly ADD node_modules/make-fetch-happen
+972 silly ADD node_modules/make-fetch-happen/node_modules/yallist
+973 silly ADD node_modules/make-fetch-happen/node_modules/lru-cache
+974 silly ADD node_modules/env-paths
+975 silly ADD node_modules/tar
+976 silly ADD node_modules/tar/node_modules/yallist
+977 silly ADD node_modules/tar/node_modules/mkdirp
+978 silly ADD node_modules/tar/node_modules/minipass
+979 silly ADD node_modules/prebuild-install
+980 silly ADD node_modules/prebuild-install/node_modules/detect-libc
+981 silly ADD node_modules/node-gyp
+982 silly ADD node_modules/node-gyp/node_modules/semver
+983 silly ADD node_modules/node-gyp/node_modules/rimraf
+984 silly ADD node_modules/@types/ms
+985 silly ADD node_modules/wkx
+986 silly ADD node_modules/validator
+987 silly ADD node_modules/toposort-class
+988 silly ADD node_modules/sequelize-pool
+989 silly ADD node_modules/retry-as-promised
+990 silly ADD node_modules/pg-connection-string
+991 silly ADD node_modules/moment-timezone
+992 silly ADD node_modules/moment
+993 silly ADD node_modules/inflection
+994 silly ADD node_modules/dottie
+995 silly ADD node_modules/@types/validator
+996 silly ADD node_modules/@types/debug
+997 silly ADD node_modules/sqlite3
+998 silly ADD node_modules/sequelize
+999 silly ADD node_modules/sequelize/node_modules/semver
+1000 silly ADD
+1001 silly ADD
+1002 silly ADD node_modules/file-uri-to-path
+1003 silly ADD node_modules/bindings
+1004 silly ADD
+1005 silly ADD
+1006 silly ADD
+1007 silly ADD
+1008 silly ADD
+1009 silly ADD
+1010 silly ADD
+1011 silly ADD
+1012 silly ADD
+1013 silly ADD
+1014 silly ADD
