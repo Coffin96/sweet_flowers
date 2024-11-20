@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProductManager from '../utils/ProductManager';
 import '../styles/AdminPanel.scss';
 
-const AdminPanel = () => {
+const AdminPanel = ({ showToast }) => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', description: '', imageUrl: '' });
     const [editingProduct, setEditingProduct] = useState(null);
@@ -20,7 +20,7 @@ const AdminPanel = () => {
             setProducts(response.products);
             setTotalPages(response.totalPages);
         } catch (error) {
-            console.error('Error fetching products', error);
+            showToast('Помилка при завантаженні продуктів', 'error');
         }
     };
 
@@ -39,8 +39,9 @@ const AdminPanel = () => {
             await productManager.createProduct(newProduct);
             setNewProduct({ name: '', price: '', description: '', imageUrl: '' });
             fetchProducts();
+            showToast('Продукт успішно додано', 'success');
         } catch (error) {
-            console.error('Error adding product', error);
+            showToast('Помилка при додаванні продукту', 'error');
         }
     };
 
@@ -50,8 +51,9 @@ const AdminPanel = () => {
             await productManager.updateProduct(editingProduct.id, editingProduct);
             setEditingProduct(null);
             fetchProducts();
+            showToast('Продукт успішно оновлено', 'success');
         } catch (error) {
-            console.error('Error editing product', error);
+            showToast('Помилка при оновленні продукту', 'error');
         }
     };
 
@@ -59,8 +61,9 @@ const AdminPanel = () => {
         try {
             await productManager.deleteProduct(id);
             fetchProducts();
+            showToast('Продукт успішно видалено', 'success');
         } catch (error) {
-            console.error('Error deleting product', error);
+            showToast('Помилка при видаленні продукту', 'error');
         }
     };
 
