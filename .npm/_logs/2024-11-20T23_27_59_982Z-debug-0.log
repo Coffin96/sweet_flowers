@@ -10552,3 +10552,4 @@
 8766 silly packumentCache corgi:https://registry.npmjs.org/jest-watch-typeahead cache-miss
 8767 http fetch GET 200 https://registry.npmjs.org/jest-watch-typeahead 61ms (cache miss)
 8768 silly packumentCache corgi:https://registry.npmjs.org/jest-watch-typeahead set size:undefined disposed:false
+8769 http fetch GET 200 https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz 26279ms (cache miss)
