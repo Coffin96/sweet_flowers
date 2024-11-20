@@ -9,3 +9,10 @@
 8 verbose argv "install"
 9 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2024-11-20T22_25_00_523Z-
 10 verbose logfile /home/user/.npm/_logs/2024-11-20T22_25_00_523Z-debug-0.log
+11 silly packumentCache heap:2114453504 maxSize:528613376 maxEntrySize:264306688
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest react@^17.0.2
+15 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/react 229ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/react set size:5175500 disposed:false
