@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/ReviewSystem.scss';
 
-const ReviewSystem = ({ productId }) => {
+const ReviewSystem = ({ productId, showToast }) => {
     const [reviews, setReviews] = useState([]);
     const [newReview, setNewReview] = useState({ rating: 5, comment: '', author: '' });
 
@@ -15,7 +15,7 @@ const ReviewSystem = ({ productId }) => {
             const response = await axios.get(`http://localhost:3001/api/products/${productId}/reviews`);
             setReviews(response.data);
         } catch (error) {
-            console.error('Error fetching reviews', error);
+            showToast('Помилка при завантаженні відгуків', 'error');
         }
     };
 
@@ -29,8 +29,9 @@ const ReviewSystem = ({ productId }) => {
             await axios.post(`http://localhost:3001/api/products/${productId}/reviews`, newReview);
             setNewReview({ rating: 5, comment: '', author: '' });
             fetchReviews();
+            showToast('Відгук успішно додано', 'success');
         } catch (error) {
-            console.error('Error submitting review', error);
+            showToast('Помилка при додаванні відгуку', 'error');
         }
     };
 
