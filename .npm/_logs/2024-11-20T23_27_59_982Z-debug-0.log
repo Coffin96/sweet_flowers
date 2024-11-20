@@ -14,3 +14,35 @@
 13 silly idealTree buildDeps
 14 silly fetch manifest concurrently@^6.2.0
 15 silly packumentCache full:https://registry.npmjs.org/concurrently cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/concurrently 358ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/concurrently set size:188885 disposed:false
+18 silly fetch manifest cors@^2.8.5
+19 silly packumentCache full:https://registry.npmjs.org/cors cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/cors 128ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/cors set size:undefined disposed:false
+22 silly fetch manifest react-router-dom@^5.2.0
+23 silly packumentCache full:https://registry.npmjs.org/react-router-dom cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/react-router-dom 36ms (cache revalidated)
+25 silly packumentCache full:https://registry.npmjs.org/react-router-dom set size:1216837 disposed:false
+26 silly fetch manifest react@^17.0.2
+27 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+28 http fetch GET 200 https://registry.npmjs.org/react 62ms (cache revalidated)
+29 silly packumentCache full:https://registry.npmjs.org/react set size:5175500 disposed:false
+30 silly fetch manifest react-scripts@4.0.3
+31 silly packumentCache full:https://registry.npmjs.org/react-scripts cache-miss
+32 http fetch GET 200 https://registry.npmjs.org/react-scripts 60ms (cache miss)
+33 silly packumentCache full:https://registry.npmjs.org/react-scripts set size:undefined disposed:false
+34 silly fetch manifest typescript@^3.2.1 || ^4
+35 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+36 http fetch GET 200 https://registry.npmjs.org/typescript 322ms (cache miss)
+37 silly packumentCache full:https://registry.npmjs.org/typescript set size:undefined disposed:false
+38 silly fetch manifest jsonwebtoken@*
+39 silly packumentCache full:https://registry.npmjs.org/jsonwebtoken cache-miss
+40 http fetch GET 200 https://registry.npmjs.org/jsonwebtoken 33ms (cache miss)
+41 silly packumentCache full:https://registry.npmjs.org/jsonwebtoken set size:undefined disposed:false
+42 silly fetch manifest bcryptjs@*
+43 silly packumentCache full:https://registry.npmjs.org/bcryptjs cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/bcryptjs 30ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/bcryptjs set size:undefined disposed:false
+46 silly placeDep ROOT bcryptjs@2.4.3 OK for: sweet-flowers@1.0.0 want: *
+47 silly placeDep ROOT concurrently@6.5.1 REPLACE for: sweet-flowers@1.0.0 want: ^6.2.0
