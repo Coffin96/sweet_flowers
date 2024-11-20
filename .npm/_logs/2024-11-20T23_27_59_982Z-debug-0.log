@@ -5278,3 +5278,359 @@
 5277 silly packumentCache full:https://registry.npmjs.org/fsevents cache-hit
 5278 silly fetch manifest resolve-cwd@^2.0.0
 5279 silly packumentCache full:https://registry.npmjs.org/resolve-cwd cache-miss
+5280 http fetch GET 200 https://registry.npmjs.org/resolve-cwd 41ms (cache revalidated)
+5281 silly packumentCache full:https://registry.npmjs.org/resolve-cwd set size:8449 disposed:false
+5282 silly placeDep node_modules/react-scripts pkg-dir@3.0.0 OK for: import-local@2.0.0 want: ^3.0.0
+5283 silly placeDep node_modules/react-scripts resolve-cwd@2.0.0 OK for: import-local@2.0.0 want: ^2.0.0
+5284 silly placeDep node_modules/react-scripts find-up@3.0.0 OK for: pkg-dir@3.0.0 want: ^3.0.0
+5285 silly placeDep node_modules/react-scripts locate-path@3.0.0 OK for: find-up@3.0.0 want: ^3.0.0
+5286 silly placeDep node_modules/react-scripts p-locate@3.0.0 OK for: locate-path@3.0.0 want: ^3.0.0
+5287 silly placeDep node_modules/react-scripts path-exists@3.0.0 OK for: locate-path@3.0.0 want: ^3.0.0
+5288 silly fetch manifest p-limit@^2.0.0
+5289 silly packumentCache full:https://registry.npmjs.org/p-limit cache-hit
+5290 silly placeDep node_modules/react-scripts/node_modules/p-locate p-limit@2.3.0 OK for: p-locate@3.0.0 want: ^2.0.0
+5291 silly placeDep node_modules/react-scripts resolve-from@3.0.0 OK for: resolve-cwd@2.0.0 want: ^3.0.0
+5292 silly placeDep node_modules/react-scripts/node_modules/webpack-manifest-plugin fs-extra@7.0.1 OK for: webpack-manifest-plugin@2.2.0 want: ^7.0.0
+5293 silly fetch manifest jsonfile@^4.0.0
+5294 silly packumentCache full:https://registry.npmjs.org/jsonfile cache-miss
+5295 silly fetch manifest universalify@^0.1.0
+5296 silly packumentCache full:https://registry.npmjs.org/universalify cache-hit
+5297 http fetch GET 200 https://registry.npmjs.org/jsonfile 6ms (cache hit)
+5298 silly packumentCache full:https://registry.npmjs.org/jsonfile set size:49739 disposed:false
+5299 silly placeDep ROOT workbox-build@5.1.4 OK for: workbox-webpack-plugin@5.1.4 want: ^5.1.4
+5300 silly fetch manifest tempy@^0.3.0
+5301 silly packumentCache full:https://registry.npmjs.org/tempy cache-miss
+5302 silly fetch manifest rollup@^1.31.1
+5303 silly packumentCache full:https://registry.npmjs.org/rollup cache-miss
+5304 silly fetch manifest fs-extra@^8.1.0
+5305 silly packumentCache full:https://registry.npmjs.org/fs-extra cache-hit
+5306 silly fetch manifest @hapi/joi@^15.1.0
+5307 silly packumentCache full:https://registry.npmjs.org/@hapi%2fjoi cache-miss
+5308 silly fetch manifest workbox-sw@^5.1.4
+5309 silly packumentCache full:https://registry.npmjs.org/workbox-sw cache-miss
+5310 silly fetch manifest common-tags@^1.8.0
+5311 silly packumentCache full:https://registry.npmjs.org/common-tags cache-miss
+5312 silly fetch manifest pretty-bytes@^5.3.0
+5313 silly packumentCache full:https://registry.npmjs.org/pretty-bytes cache-miss
+5314 silly fetch manifest workbox-core@^5.1.4
+5315 silly packumentCache full:https://registry.npmjs.org/workbox-core cache-miss
+5316 http fetch GET 200 https://registry.npmjs.org/tempy 45ms (cache miss)
+5317 silly packumentCache full:https://registry.npmjs.org/tempy set size:undefined disposed:false
+5318 silly fetch manifest strip-comments@^1.0.2
+5319 silly packumentCache full:https://registry.npmjs.org/strip-comments cache-miss
+5320 http fetch GET 200 https://registry.npmjs.org/pretty-bytes 58ms (cache miss)
+5321 silly packumentCache full:https://registry.npmjs.org/pretty-bytes set size:undefined disposed:false
+5322 silly fetch manifest workbox-window@^5.1.4
+5323 silly packumentCache full:https://registry.npmjs.org/workbox-window cache-miss
+5324 http fetch GET 200 https://registry.npmjs.org/common-tags 68ms (cache miss)
+5325 silly packumentCache full:https://registry.npmjs.org/common-tags set size:undefined disposed:false
+5326 silly fetch manifest lodash.template@^4.5.0
+5327 silly packumentCache full:https://registry.npmjs.org/lodash.template cache-miss
+5328 http fetch GET 200 https://registry.npmjs.org/@hapi%2fjoi 73ms (cache miss)
+5329 silly packumentCache full:https://registry.npmjs.org/@hapi%2fjoi set size:undefined disposed:false
+5330 silly fetch manifest workbox-routing@^5.1.4
+5331 silly packumentCache full:https://registry.npmjs.org/workbox-routing cache-miss
+5332 http fetch GET 200 https://registry.npmjs.org/workbox-core 72ms (cache miss)
+5333 silly packumentCache full:https://registry.npmjs.org/workbox-core set size:undefined disposed:false
+5334 silly fetch manifest workbox-streams@^5.1.4
+5335 silly packumentCache full:https://registry.npmjs.org/workbox-streams cache-miss
+5336 http fetch GET 200 https://registry.npmjs.org/workbox-sw 81ms (cache miss)
+5337 silly packumentCache full:https://registry.npmjs.org/workbox-sw set size:undefined disposed:false
+5338 silly fetch manifest stringify-object@^3.3.0
+5339 silly packumentCache full:https://registry.npmjs.org/stringify-object cache-miss
+5340 http fetch GET 200 https://registry.npmjs.org/strip-comments 52ms (cache miss)
+5341 silly packumentCache full:https://registry.npmjs.org/strip-comments set size:undefined disposed:false
+5342 silly fetch manifest workbox-expiration@^5.1.4
+5343 silly packumentCache full:https://registry.npmjs.org/workbox-expiration cache-miss
+5344 http fetch GET 200 https://registry.npmjs.org/lodash.template 51ms (cache miss)
+5345 silly packumentCache full:https://registry.npmjs.org/lodash.template set size:undefined disposed:false
+5346 silly fetch manifest workbox-precaching@^5.1.4
+5347 silly packumentCache full:https://registry.npmjs.org/workbox-precaching cache-miss
+5348 http fetch GET 200 https://registry.npmjs.org/workbox-window 68ms (cache miss)
+5349 silly packumentCache full:https://registry.npmjs.org/workbox-window set size:undefined disposed:false
+5350 silly fetch manifest workbox-strategies@^5.1.4
+5351 silly packumentCache full:https://registry.npmjs.org/workbox-strategies cache-miss
+5352 http fetch GET 200 https://registry.npmjs.org/stringify-object 56ms (cache miss)
+5353 silly packumentCache full:https://registry.npmjs.org/stringify-object set size:undefined disposed:false
+5354 silly fetch manifest rollup-plugin-babel@^4.3.3
+5355 silly packumentCache full:https://registry.npmjs.org/rollup-plugin-babel cache-miss
+5356 http fetch GET 200 https://registry.npmjs.org/workbox-streams 69ms (cache miss)
+5357 silly packumentCache full:https://registry.npmjs.org/workbox-streams set size:undefined disposed:false
+5358 silly fetch manifest rollup-plugin-terser@^5.3.1
+5359 silly packumentCache full:https://registry.npmjs.org/rollup-plugin-terser cache-miss
+5360 http fetch GET 200 https://registry.npmjs.org/workbox-routing 80ms (cache miss)
+5361 silly packumentCache full:https://registry.npmjs.org/workbox-routing set size:undefined disposed:false
+5362 silly fetch manifest @rollup/plugin-replace@^2.3.1
+5363 silly packumentCache full:https://registry.npmjs.org/@rollup%2fplugin-replace cache-miss
+5364 http fetch GET 200 https://registry.npmjs.org/workbox-expiration 67ms (cache miss)
+5365 silly packumentCache full:https://registry.npmjs.org/workbox-expiration set size:undefined disposed:false
+5366 silly fetch manifest workbox-range-requests@^5.1.4
+5367 silly packumentCache full:https://registry.npmjs.org/workbox-range-requests cache-miss
+5368 http fetch GET 200 https://registry.npmjs.org/workbox-strategies 48ms (cache miss)
+5369 silly packumentCache full:https://registry.npmjs.org/workbox-strategies set size:undefined disposed:false
+5370 silly fetch manifest workbox-background-sync@^5.1.4
+5371 silly packumentCache full:https://registry.npmjs.org/workbox-background-sync cache-miss
+5372 http fetch GET 200 https://registry.npmjs.org/workbox-precaching 78ms (cache miss)
+5373 silly packumentCache full:https://registry.npmjs.org/workbox-precaching set size:undefined disposed:false
+5374 silly fetch manifest workbox-broadcast-update@^5.1.4
+5375 silly packumentCache full:https://registry.npmjs.org/workbox-broadcast-update cache-miss
+5376 http fetch GET 200 https://registry.npmjs.org/rollup-plugin-babel 67ms (cache miss)
+5377 silly packumentCache full:https://registry.npmjs.org/rollup-plugin-babel set size:undefined disposed:false
+5378 silly fetch manifest workbox-google-analytics@^5.1.4
+5379 silly packumentCache full:https://registry.npmjs.org/workbox-google-analytics cache-miss
+5380 http fetch GET 200 https://registry.npmjs.org/rollup-plugin-terser 70ms (cache miss)
+5381 silly packumentCache full:https://registry.npmjs.org/rollup-plugin-terser set size:undefined disposed:false
+5382 silly fetch manifest workbox-cacheable-response@^5.1.4
+5383 silly packumentCache full:https://registry.npmjs.org/workbox-cacheable-response cache-miss
+5384 http fetch GET 200 https://registry.npmjs.org/workbox-range-requests 66ms (cache miss)
+5385 silly packumentCache full:https://registry.npmjs.org/workbox-range-requests set size:undefined disposed:false
+5386 silly fetch manifest workbox-navigation-preload@^5.1.4
+5387 silly packumentCache full:https://registry.npmjs.org/workbox-navigation-preload cache-miss
+5388 http fetch GET 200 https://registry.npmjs.org/@rollup%2fplugin-replace 84ms (cache miss)
+5389 silly packumentCache full:https://registry.npmjs.org/@rollup%2fplugin-replace set size:undefined disposed:false
+5390 silly fetch manifest @rollup/plugin-node-resolve@^7.1.1
+5391 silly packumentCache full:https://registry.npmjs.org/@rollup%2fplugin-node-resolve cache-miss
+5392 http fetch GET 200 https://registry.npmjs.org/workbox-background-sync 69ms (cache miss)
+5393 silly packumentCache full:https://registry.npmjs.org/workbox-background-sync set size:undefined disposed:false
+5394 silly fetch manifest @surma/rollup-plugin-off-main-thread@^1.1.1
+5395 silly packumentCache full:https://registry.npmjs.org/@surma%2frollup-plugin-off-main-thread cache-miss
+5396 http fetch GET 200 https://registry.npmjs.org/workbox-broadcast-update 58ms (cache miss)
+5397 silly packumentCache full:https://registry.npmjs.org/workbox-broadcast-update set size:undefined disposed:false
+5398 http fetch GET 200 https://registry.npmjs.org/workbox-cacheable-response 65ms (cache miss)
+5399 silly packumentCache full:https://registry.npmjs.org/workbox-cacheable-response set size:undefined disposed:false
+5400 http fetch GET 200 https://registry.npmjs.org/workbox-google-analytics 79ms (cache miss)
+5401 silly packumentCache full:https://registry.npmjs.org/workbox-google-analytics set size:undefined disposed:false
+5402 http fetch GET 200 https://registry.npmjs.org/workbox-navigation-preload 66ms (cache miss)
+5403 silly packumentCache full:https://registry.npmjs.org/workbox-navigation-preload set size:undefined disposed:false
+5404 http fetch GET 200 https://registry.npmjs.org/@surma%2frollup-plugin-off-main-thread 73ms (cache miss)
+5405 silly packumentCache full:https://registry.npmjs.org/@surma%2frollup-plugin-off-main-thread set size:undefined disposed:false
+5406 http fetch GET 200 https://registry.npmjs.org/@rollup%2fplugin-node-resolve 103ms (cache miss)
+5407 silly packumentCache full:https://registry.npmjs.org/@rollup%2fplugin-node-resolve set size:undefined disposed:false
+5408 http fetch GET 200 https://registry.npmjs.org/rollup 362ms (cache miss)
+5409 silly packumentCache full:https://registry.npmjs.org/rollup set size:undefined disposed:false
+5410 silly fetch manifest @babel/core@^7.8.4
+5411 silly packumentCache full:https://registry.npmjs.org/@babel%2fcore cache-hit
+5412 silly placeDep ROOT @hapi/joi@15.1.1 OK for: workbox-build@5.1.4 want: ^15.1.0
+5413 silly placeDep ROOT @rollup/plugin-node-resolve@7.1.3 OK for: workbox-build@5.1.4 want: ^7.1.1
+5414 silly placeDep ROOT rollup@1.32.1 OK for: @rollup/plugin-node-resolve@7.1.3 want: ^1.20.0||^2.0.0
+5415 silly placeDep ROOT @rollup/plugin-replace@2.4.2 OK for: workbox-build@5.1.4 want: ^2.3.1
+5416 silly placeDep ROOT @surma/rollup-plugin-off-main-thread@1.4.2 OK for: workbox-build@5.1.4 want: ^1.1.1
+5417 silly placeDep ROOT common-tags@1.8.2 OK for: workbox-build@5.1.4 want: ^1.8.0
+5418 silly placeDep node_modules/workbox-build fs-extra@8.1.0 OK for: workbox-build@5.1.4 want: ^8.1.0
+5419 silly placeDep ROOT lodash.template@4.5.0 OK for: workbox-build@5.1.4 want: ^4.5.0
+5420 silly placeDep ROOT pretty-bytes@5.6.0 OK for: workbox-build@5.1.4 want: ^5.3.0
+5421 silly placeDep ROOT rollup-plugin-babel@4.4.0 OK for: workbox-build@5.1.4 want: ^4.3.3
+5422 silly placeDep ROOT rollup-plugin-terser@5.3.1 OK for: workbox-build@5.1.4 want: ^5.3.1
+5423 silly placeDep node_modules/workbox-build source-map@0.7.4 OK for: workbox-build@5.1.4 want: ^0.7.3
+5424 silly placeDep ROOT stringify-object@3.3.0 OK for: workbox-build@5.1.4 want: ^3.3.0
+5425 silly placeDep ROOT strip-comments@1.0.2 OK for: workbox-build@5.1.4 want: ^1.0.2
+5426 silly placeDep ROOT tempy@0.3.0 OK for: workbox-build@5.1.4 want: ^0.3.0
+5427 silly placeDep ROOT workbox-background-sync@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5428 silly placeDep ROOT workbox-broadcast-update@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5429 silly placeDep ROOT workbox-cacheable-response@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5430 silly placeDep ROOT workbox-core@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5431 silly placeDep ROOT workbox-expiration@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5432 silly placeDep ROOT workbox-google-analytics@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5433 silly placeDep ROOT workbox-navigation-preload@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5434 silly placeDep ROOT workbox-precaching@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5435 silly placeDep ROOT workbox-range-requests@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5436 silly placeDep ROOT workbox-routing@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5437 silly placeDep ROOT workbox-strategies@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5438 silly placeDep ROOT workbox-streams@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5439 silly placeDep ROOT workbox-sw@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5440 silly placeDep ROOT workbox-window@5.1.4 OK for: workbox-build@5.1.4 want: ^5.1.4
+5441 silly fetch manifest @hapi/address@2.x.x
+5442 silly packumentCache full:https://registry.npmjs.org/@hapi%2faddress cache-miss
+5443 silly fetch manifest @hapi/bourne@1.x.x
+5444 silly packumentCache full:https://registry.npmjs.org/@hapi%2fbourne cache-miss
+5445 silly fetch manifest @hapi/hoek@8.x.x
+5446 silly packumentCache full:https://registry.npmjs.org/@hapi%2fhoek cache-miss
+5447 silly fetch manifest @hapi/topo@3.x.x
+5448 silly packumentCache full:https://registry.npmjs.org/@hapi%2ftopo cache-miss
+5449 silly fetch manifest is-module@^1.0.0
+5450 silly packumentCache full:https://registry.npmjs.org/is-module cache-miss
+5451 silly fetch manifest @types/resolve@0.0.8
+5452 silly packumentCache full:https://registry.npmjs.org/@types%2fresolve cache-miss
+5453 silly fetch manifest builtin-modules@^3.1.0
+5454 silly packumentCache full:https://registry.npmjs.org/builtin-modules cache-miss
+5455 http fetch GET 200 https://registry.npmjs.org/is-module 44ms (cache miss)
+5456 silly packumentCache full:https://registry.npmjs.org/is-module set size:undefined disposed:false
+5457 silly fetch manifest @rollup/pluginutils@^3.0.8
+5458 silly packumentCache full:https://registry.npmjs.org/@rollup%2fpluginutils cache-miss
+5459 http fetch GET 200 https://registry.npmjs.org/builtin-modules 47ms (cache miss)
+5460 silly packumentCache full:https://registry.npmjs.org/builtin-modules set size:undefined disposed:false
+5461 silly fetch manifest acorn@^7.1.0
+5462 silly packumentCache full:https://registry.npmjs.org/acorn cache-hit
+5463 silly fetch manifest magic-string@^0.25.7
+5464 silly packumentCache full:https://registry.npmjs.org/magic-string cache-miss
+5465 http fetch GET 200 https://registry.npmjs.org/@hapi%2faddress 66ms (cache miss)
+5466 silly packumentCache full:https://registry.npmjs.org/@hapi%2faddress set size:undefined disposed:false
+5467 silly fetch manifest @rollup/pluginutils@^3.1.0
+5468 silly packumentCache full:https://registry.npmjs.org/@rollup%2fpluginutils cache-miss
+5469 http fetch GET 200 https://registry.npmjs.org/@hapi%2fbourne 70ms (cache miss)
+5470 silly packumentCache full:https://registry.npmjs.org/@hapi%2fbourne set size:undefined disposed:false
+5471 silly fetch manifest ejs@^2.6.1
+5472 silly packumentCache full:https://registry.npmjs.org/ejs cache-miss
+5473 http fetch GET 200 https://registry.npmjs.org/@hapi%2ftopo 70ms (cache miss)
+5474 silly packumentCache full:https://registry.npmjs.org/@hapi%2ftopo set size:undefined disposed:false
+5475 silly fetch manifest magic-string@^0.25.0
+5476 silly packumentCache full:https://registry.npmjs.org/magic-string cache-miss
+5477 http fetch GET 200 https://registry.npmjs.org/@hapi%2fhoek 79ms (cache miss)
+5478 silly packumentCache full:https://registry.npmjs.org/@hapi%2fhoek set size:undefined disposed:false
+5479 silly fetch manifest lodash._reinterpolate@^3.0.0
+5480 silly packumentCache full:https://registry.npmjs.org/lodash._reinterpolate cache-miss
+5481 http fetch GET 200 https://registry.npmjs.org/@types%2fresolve 80ms (cache miss)
+5482 silly packumentCache full:https://registry.npmjs.org/@types%2fresolve set size:undefined disposed:false
+5483 silly fetch manifest lodash.templatesettings@^4.0.0
+5484 silly packumentCache full:https://registry.npmjs.org/lodash.templatesettings cache-miss
+5485 http fetch GET 200 https://registry.npmjs.org/@rollup%2fpluginutils 51ms (cache miss)
+5486 silly packumentCache full:https://registry.npmjs.org/@rollup%2fpluginutils set size:undefined disposed:false
+5487 silly fetch manifest rollup-pluginutils@^2.8.1
+5488 silly packumentCache full:https://registry.npmjs.org/rollup-pluginutils cache-miss
+5489 http fetch GET 200 https://registry.npmjs.org/magic-string 61ms (cache miss)
+5490 silly packumentCache full:https://registry.npmjs.org/magic-string set size:undefined disposed:false
+5491 silly fetch manifest jest-worker@^24.9.0
+5492 silly packumentCache full:https://registry.npmjs.org/jest-worker cache-hit
+5493 silly fetch manifest rollup-pluginutils@^2.8.2
+5494 silly packumentCache full:https://registry.npmjs.org/rollup-pluginutils cache-miss
+5495 http fetch GET 200 https://registry.npmjs.org/ejs 51ms (cache miss)
+5496 silly packumentCache full:https://registry.npmjs.org/ejs set size:undefined disposed:false
+5497 silly fetch manifest terser@^4.6.2
+5498 silly packumentCache full:https://registry.npmjs.org/terser cache-hit
+5499 silly fetch manifest get-own-enumerable-property-symbols@^3.0.0
+5500 silly packumentCache full:https://registry.npmjs.org/get-own-enumerable-property-symbols cache-miss
+5501 http fetch GET 200 https://registry.npmjs.org/lodash._reinterpolate 58ms (cache miss)
+5502 silly packumentCache full:https://registry.npmjs.org/lodash._reinterpolate set size:undefined disposed:false
+5503 silly fetch manifest is-obj@^1.0.1
+5504 silly packumentCache full:https://registry.npmjs.org/is-obj cache-miss
+5505 http fetch GET 200 https://registry.npmjs.org/@rollup%2fpluginutils 79ms (cache miss)
+5506 silly packumentCache full:https://registry.npmjs.org/@rollup%2fpluginutils set size:undefined disposed:false
+5507 silly fetch manifest is-regexp@^1.0.0
+5508 silly packumentCache full:https://registry.npmjs.org/is-regexp cache-miss
+5509 http fetch GET 200 https://registry.npmjs.org/lodash.templatesettings 65ms (cache miss)
+5510 silly packumentCache full:https://registry.npmjs.org/lodash.templatesettings set size:undefined disposed:false
+5511 silly fetch manifest babel-extract-comments@^1.0.0
+5512 silly packumentCache full:https://registry.npmjs.org/babel-extract-comments cache-miss
+5513 http fetch GET 200 https://registry.npmjs.org/magic-string 80ms (cache miss)
+5514 silly packumentCache full:https://registry.npmjs.org/magic-string set size:undefined disposed:false
+5515 silly fetch manifest babel-plugin-transform-object-rest-spread@^6.26.0
+5516 silly packumentCache full:https://registry.npmjs.org/babel-plugin-transform-object-rest-spread cache-miss
+5517 http fetch GET 200 https://registry.npmjs.org/rollup-pluginutils 62ms (cache miss)
+5518 silly packumentCache full:https://registry.npmjs.org/rollup-pluginutils set size:undefined disposed:false
+5519 silly fetch manifest temp-dir@^1.0.0
+5520 silly packumentCache full:https://registry.npmjs.org/temp-dir cache-miss
+5521 http fetch GET 200 https://registry.npmjs.org/is-obj 32ms (cache hit)
+5522 silly packumentCache full:https://registry.npmjs.org/is-obj set size:9560 disposed:false
+5523 silly fetch manifest type-fest@^0.3.1
+5524 silly packumentCache full:https://registry.npmjs.org/type-fest cache-hit
+5525 silly fetch manifest unique-string@^1.0.0
+5526 silly packumentCache full:https://registry.npmjs.org/unique-string cache-miss
+5527 http fetch GET 200 https://registry.npmjs.org/get-own-enumerable-property-symbols 53ms (cache miss)
+5528 silly packumentCache full:https://registry.npmjs.org/get-own-enumerable-property-symbols set size:undefined disposed:false
+5529 http fetch GET 200 https://registry.npmjs.org/is-regexp 37ms (cache miss)
+5530 silly packumentCache full:https://registry.npmjs.org/is-regexp set size:undefined disposed:false
+5531 http fetch GET 200 https://registry.npmjs.org/babel-extract-comments 32ms (cache miss)
+5532 silly packumentCache full:https://registry.npmjs.org/babel-extract-comments set size:undefined disposed:false
+5533 http fetch GET 200 https://registry.npmjs.org/rollup-pluginutils 61ms (cache miss)
+5534 silly packumentCache full:https://registry.npmjs.org/rollup-pluginutils set size:undefined disposed:false
+5535 http fetch GET 200 https://registry.npmjs.org/temp-dir 35ms (cache miss)
+5536 silly packumentCache full:https://registry.npmjs.org/temp-dir set size:undefined disposed:false
+5537 http fetch GET 200 https://registry.npmjs.org/babel-plugin-transform-object-rest-spread 45ms (cache miss)
+5538 silly packumentCache full:https://registry.npmjs.org/babel-plugin-transform-object-rest-spread set size:undefined disposed:false
+5539 http fetch GET 200 https://registry.npmjs.org/unique-string 29ms (cache miss)
+5540 silly packumentCache full:https://registry.npmjs.org/unique-string set size:undefined disposed:false
+5541 silly placeDep ROOT @hapi/address@2.1.4 OK for: @hapi/joi@15.1.1 want: 2.x.x
+5542 silly placeDep ROOT @hapi/bourne@1.3.2 OK for: @hapi/joi@15.1.1 want: 1.x.x
+5543 silly placeDep ROOT @hapi/hoek@8.5.1 OK for: @hapi/joi@15.1.1 want: 8.x.x
+5544 silly placeDep ROOT @hapi/topo@3.1.6 OK for: @hapi/joi@15.1.1 want: 3.x.x
+5545 silly fetch manifest rollup@^1.20.0||^2.0.0
+5546 silly packumentCache full:https://registry.npmjs.org/rollup cache-miss
+5547 http fetch GET 200 https://registry.npmjs.org/rollup 18ms (cache hit)
+5548 silly packumentCache full:https://registry.npmjs.org/rollup set size:5085537 disposed:false
+5549 silly placeDep ROOT @rollup/pluginutils@3.1.0 OK for: @rollup/plugin-node-resolve@7.1.3 want: ^3.0.8
+5550 silly placeDep ROOT @types/resolve@0.0.8 OK for: @rollup/plugin-node-resolve@7.1.3 want: 0.0.8
+5551 silly placeDep ROOT builtin-modules@3.3.0 OK for: @rollup/plugin-node-resolve@7.1.3 want: ^3.1.0
+5552 silly placeDep ROOT is-module@1.0.0 OK for: @rollup/plugin-node-resolve@7.1.3 want: ^1.0.0
+5553 silly fetch manifest @types/estree@0.0.39
+5554 silly packumentCache full:https://registry.npmjs.org/@types%2festree cache-miss
+5555 silly fetch manifest estree-walker@^1.0.1
+5556 silly packumentCache full:https://registry.npmjs.org/estree-walker cache-miss
+5557 http fetch GET 200 https://registry.npmjs.org/estree-walker 27ms (cache miss)
+5558 silly packumentCache full:https://registry.npmjs.org/estree-walker set size:undefined disposed:false
+5559 http fetch GET 200 https://registry.npmjs.org/@types%2festree 48ms (cache revalidated)
+5560 silly packumentCache full:https://registry.npmjs.org/@types%2festree set size:71109 disposed:false
+5561 silly placeDep ROOT magic-string@0.25.9 OK for: @rollup/plugin-replace@2.4.2 want: ^0.25.7
+5562 silly fetch manifest sourcemap-codec@^1.4.8
+5563 silly packumentCache full:https://registry.npmjs.org/sourcemap-codec cache-miss
+5564 http fetch GET 200 https://registry.npmjs.org/sourcemap-codec 30ms (cache miss)
+5565 silly packumentCache full:https://registry.npmjs.org/sourcemap-codec set size:undefined disposed:false
+5566 silly placeDep node_modules/@rollup/pluginutils @types/estree@0.0.39 OK for: @rollup/pluginutils@3.1.0 want: 0.0.39
+5567 silly placeDep ROOT estree-walker@1.0.1 OK for: @rollup/pluginutils@3.1.0 want: ^1.0.1
+5568 silly placeDep ROOT ejs@2.7.4 OK for: @surma/rollup-plugin-off-main-thread@1.4.2 want: ^2.6.1
+5569 silly placeDep ROOT lodash._reinterpolate@3.0.0 OK for: lodash.template@4.5.0 want: ^3.0.0
+5570 silly placeDep ROOT lodash.templatesettings@4.2.0 OK for: lodash.template@4.5.0 want: ^4.0.0
+5571 silly placeDep ROOT sourcemap-codec@1.4.8 OK for: magic-string@0.25.9 want: ^1.4.8
+5572 silly placeDep node_modules/rollup acorn@7.4.1 OK for: rollup@1.32.1 want: ^7.1.0
+5573 silly placeDep ROOT rollup-pluginutils@2.8.2 OK for: rollup-plugin-babel@4.4.0 want: ^2.8.1
+5574 silly fetch manifest estree-walker@^0.6.1
+5575 silly packumentCache full:https://registry.npmjs.org/estree-walker cache-miss
+5576 http fetch GET 200 https://registry.npmjs.org/estree-walker 5ms (cache hit)
+5577 silly packumentCache full:https://registry.npmjs.org/estree-walker set size:60887 disposed:false
+5578 silly placeDep node_modules/rollup-plugin-terser jest-worker@24.9.0 OK for: rollup-plugin-terser@5.3.1 want: ^24.9.0
+5579 silly placeDep node_modules/rollup-plugin-terser serialize-javascript@4.0.0 OK for: rollup-plugin-terser@5.3.1 want: ^4.0.0
+5580 silly placeDep node_modules/rollup-plugin-terser terser@4.8.1 OK for: rollup-plugin-terser@5.3.1 want: ^4.6.2
+5581 silly placeDep node_modules/rollup-pluginutils estree-walker@0.6.1 OK for: rollup-pluginutils@2.8.2 want: ^0.6.1
+5582 silly placeDep ROOT get-own-enumerable-property-symbols@3.0.2 OK for: stringify-object@3.3.0 want: ^3.0.0
+5583 silly placeDep node_modules/stringify-object is-obj@1.0.1 OK for: stringify-object@3.3.0 want: ^1.0.1
+5584 silly placeDep ROOT is-regexp@1.0.0 OK for: stringify-object@3.3.0 want: ^1.0.0
+5585 silly placeDep ROOT babel-extract-comments@1.0.0 OK for: strip-comments@1.0.2 want: ^1.0.0
+5586 silly placeDep ROOT babel-plugin-transform-object-rest-spread@6.26.0 OK for: strip-comments@1.0.2 want: ^6.26.0
+5587 silly fetch manifest babylon@^6.18.0
+5588 silly packumentCache full:https://registry.npmjs.org/babylon cache-miss
+5589 silly fetch manifest babel-plugin-syntax-object-rest-spread@^6.8.0
+5590 silly packumentCache full:https://registry.npmjs.org/babel-plugin-syntax-object-rest-spread cache-miss
+5591 silly fetch manifest babel-runtime@^6.26.0
+5592 silly packumentCache full:https://registry.npmjs.org/babel-runtime cache-miss
+5593 http fetch GET 200 https://registry.npmjs.org/babel-plugin-syntax-object-rest-spread 37ms (cache miss)
+5594 silly packumentCache full:https://registry.npmjs.org/babel-plugin-syntax-object-rest-spread set size:undefined disposed:false
+5595 http fetch GET 200 https://registry.npmjs.org/babylon 45ms (cache miss)
+5596 silly packumentCache full:https://registry.npmjs.org/babylon set size:undefined disposed:false
+5597 http fetch GET 200 https://registry.npmjs.org/babel-runtime 54ms (cache miss)
+5598 silly packumentCache full:https://registry.npmjs.org/babel-runtime set size:undefined disposed:false
+5599 silly placeDep ROOT babylon@6.18.0 OK for: babel-extract-comments@1.0.0 want: ^6.18.0
+5600 silly placeDep ROOT babel-plugin-syntax-object-rest-spread@6.13.0 OK for: babel-plugin-transform-object-rest-spread@6.26.0 want: ^6.8.0
+5601 silly placeDep ROOT babel-runtime@6.26.0 OK for: babel-plugin-transform-object-rest-spread@6.26.0 want: ^6.26.0
+5602 silly fetch manifest core-js@^2.4.0
+5603 silly packumentCache full:https://registry.npmjs.org/core-js cache-miss
+5604 silly fetch manifest regenerator-runtime@^0.11.0
+5605 silly packumentCache full:https://registry.npmjs.org/regenerator-runtime cache-hit
+5606 http fetch GET 200 https://registry.npmjs.org/core-js 11ms (cache hit)
+5607 silly packumentCache full:https://registry.npmjs.org/core-js set size:755093 disposed:false
+5608 silly placeDep node_modules/babel-runtime core-js@2.6.12 OK for: babel-runtime@6.26.0 want: ^2.4.0
+5609 silly placeDep node_modules/babel-runtime regenerator-runtime@0.11.1 OK for: babel-runtime@6.26.0 want: ^0.11.0
+5610 silly placeDep ROOT temp-dir@1.0.0 OK for: tempy@0.3.0 want: ^1.0.0
+5611 silly placeDep node_modules/tempy type-fest@0.3.1 OK for: tempy@0.3.0 want: ^0.3.1
+5612 silly placeDep ROOT unique-string@1.0.0 OK for: tempy@0.3.0 want: ^1.0.0
+5613 silly fetch manifest crypto-random-string@^1.0.0
+5614 silly packumentCache full:https://registry.npmjs.org/crypto-random-string cache-miss
+5615 http fetch GET 200 https://registry.npmjs.org/crypto-random-string 29ms (cache miss)
+5616 silly packumentCache full:https://registry.npmjs.org/crypto-random-string set size:undefined disposed:false
+5617 silly placeDep ROOT crypto-random-string@1.0.0 OK for: unique-string@1.0.0 want: ^1.0.0
+5618 silly placeDep node_modules/resolve-url-loader safe-buffer@5.1.2 OK for: convert-source-map@1.7.0 want: ~5.1.1
+5619 silly placeDep node_modules/resolve-url-loader json5@1.0.2 OK for: loader-utils@1.4.2 want: ^1.0.1
+5620 silly placeDep node_modules/resolve-url-loader chalk@2.4.2 OK for: postcss@7.0.36 want: ^2.4.2
+5621 silly placeDep node_modules/resolve-url-loader supports-color@6.1.0 OK for: postcss@7.0.36 want: ^6.1.0
+5622 silly placeDep node_modules/resolve-url-loader escape-string-regexp@1.0.5 OK for: chalk@2.4.2 want: ^1.0.5
+5623 silly placeDep node_modules/resolve-url-loader/node_modules/chalk supports-color@5.5.0 OK for: chalk@2.4.2 want: ^5.3.0
+5624 silly placeDep node_modules/resolve-url-loader has-flag@3.0.0 OK for: supports-color@6.1.0 want: ^3.0.0
+5625 silly placeDep node_modules/rollup-plugin-terser supports-color@6.1.0 OK for: jest-worker@24.9.0 want: ^6.1.0
+5626 silly placeDep node_modules/rollup-plugin-terser has-flag@3.0.0 OK for: supports-color@6.1.0 want: ^3.0.0
+5627 silly placeDep node_modules/rollup-plugin-terser commander@2.20.3 OK for: terser@4.8.1 want: ^2.20.0
+5628 silly placeDep node_modules/sane braces@2.3.2 OK for: micromatch@3.1.10 want: ^2.3.1
+5629 silly placeDep node_modules/sane/node_modules/braces extend-shallow@2.0.1 OK for: braces@2.3.2 want: ^2.0.1
+5630 silly placeDep node_modules/sane fill-range@4.0.0 OK for: braces@2.3.2 want: ^4.0.0
+5631 silly placeDep node_modules/sane/node_modules/fill-range extend-shallow@2.0.1 OK for: fill-range@4.0.0 want: ^2.0.1
+5632 silly placeDep node_modules/sane is-number@3.0.0 OK for: fill-range@4.0.0 want: ^3.0.0
+5633 silly placeDep node_modules/sane to-regex-range@2.1.1 OK for: fill-range@4.0.0 want: ^2.1.0
+5634 silly placeDep node_modules/sane/node_modules/is-number kind-of@3.2.2 OK for: is-number@3.0.0 want: ^3.0.2
+5635 silly placeDep node_modules/slice-ansi color-convert@2.0.1 OK for: ansi-styles@4.3.0 want: ^2.0.1
