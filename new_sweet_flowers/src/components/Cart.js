@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Cart.scss';
 
-function Cart({ items }) {
-    const total = items.reduce((sum, item) => sum + item.price, 0);
+const Cart = ({ items }) => {
+    const totalPrice = items.reduce((sum, item) => sum + item.price, 0);
 
     return (
         <div className="cart">
@@ -13,17 +13,23 @@ function Cart({ items }) {
                 <>
                     <ul>
                         {items.map((item, index) => (
-                            <li key={index}>
-                                {item.name} - {item.price} грн
+                            <li key={index} className="cart-item">
+                                <img src={item.imageUrl} alt={item.name} className="cart-item-image" />
+                                <div className="cart-item-details">
+                                    <h4>{item.name}</h4>
+                                    <p>{item.price} грн</p>
+                                </div>
                             </li>
                         ))}
                     </ul>
-                    <p className="total">Загальна сума: {total} грн</p>
-                    <button className="checkout-button">Оформити замовлення</button>
+                    <div className="cart-total">
+                        <strong>Загальна сума:</strong>
+                        <strong>{totalPrice} грн</strong>
+                    </div>
                 </>
             )}
         </div>
     );
-}
+};
 
 export default Cart;
