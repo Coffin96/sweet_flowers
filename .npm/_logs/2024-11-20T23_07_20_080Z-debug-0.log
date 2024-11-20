@@ -872,3 +872,37 @@
 129 silly packumentCache corgi:https://registry.npmjs.org/dns-packet set size:47403 disposed:false
 130 silly packumentCache corgi:https://registry.npmjs.org/selfsigned cache-miss
 131 http fetch GET 200 https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz 596ms (cache miss)
+132 http fetch GET 200 https://registry.npmjs.org/selfsigned 362ms (cache revalidated)
+133 silly packumentCache corgi:https://registry.npmjs.org/selfsigned set size:31119 disposed:false
+134 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns cache-miss
+135 http fetch GET 200 https://registry.npmjs.org/multicast-dns 57ms (cache revalidated)
+136 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns set size:33661 disposed:false
+137 silly packumentCache corgi:https://registry.npmjs.org/bonjour cache-miss
+138 http fetch GET 200 https://registry.npmjs.org/bonjour 34ms (cache revalidated)
+139 silly packumentCache corgi:https://registry.npmjs.org/bonjour set size:8131 disposed:false
+140 silly ADD node_modules/react-router
+141 silly ADD node_modules/@remix-run/router
+142 silly ADD node_modules/react-router-dom
+143 silly ADD node_modules/gsap
+144 silly ADD node_modules/axios
+145 silly ADD
+146 silly ADD
+147 silly ADD
+148 silly ADD
+149 silly ADD
+150 silly ADD
+151 silly ADD
+152 silly ADD
+153 silly ADD
+154 silly ADD
+155 silly ADD
+156 silly ADD
+157 silly ADD
+158 silly ADD
+159 silly ADD
+160 verbose cwd /home/user/new_sweet_flowers
+161 verbose os Linux 5.10.186+
+162 verbose node v20.18.0
+163 verbose npm  v10.8.2
+164 verbose exit 0
+165 info ok
