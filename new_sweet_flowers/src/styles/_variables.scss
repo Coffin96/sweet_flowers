@@ -1,5 +1,27 @@
-$primary-color: #FF69B4; // Pink
-$secondary-color: #FFF0F5; // Light pink
-$accent-color: #FF0000; // Red
-$background-color: #FFFFFF; // White
-$text-color: #333333; // Dark gray
+// Кольорова палітра
+$primary-color: #FF69B4; // Рожевий
+$secondary-color: #FFF0F5; // Світло-рожевий
+$accent-color: #FF0000; // Червоний
+$background-color: #FFFFFF; // Білий
+$text-color: #333333; // Темно-сірий
+
+// Розміри
+$max-width: 1200px;
+$border-radius: 10px;
+
+// Тіні
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Переходи
+$transition-duration: 0.3s;
+
+// Шрифти
+$font-family: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-small: 14px;
+
+// Відступи
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
