@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet Site | Зефірні Букети</title>
+    
+    <!-- Сучасні шрифти та бібліотеки -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Бібліотеки -->
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="css/modern-animations.css">
+    <link rel="stylesheet" href="css/global-styles.css">
+
+    <!-- Мета теги для адаптивності -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Унікальні зефірні букети з неперевершеним дизайном">
+</head>
+<body class="smooth-scroll">
+    <!-- WebGL Canvas для фонових ефектів -->
+    <canvas id="background-canvas"></canvas>
+
+    <div id="app" class="container">
+        <!-- Навігація з мікро-анімаціями -->
+        <nav class="morphing-nav">
+            <div class="nav-wrapper">
+                <a href="#home" class="nav-link">Головна</a>
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">Про нас</a>
+                <a href="#contacts" class="nav-link">Контакти</a>
+            </div>
+        </nav>
+
+        <!-- Головний контент з інтерактивними елементами -->
+        <main>
+            <section id="hero" class="hero-section parallax-section">
+                <div class="hero-content">
+                    <h1 class="glitch-text" data-text="Sweet Site">Sweet Site</h1>
+                    <p class="typed-text">Букети з зефіру, які підкорюють серця</p>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary morphing-button">
+                            Замовити зараз
+                        </button>
+                        <button class="btn btn-secondary liquid-button">
+                            Переглянути колекцію
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Каталог з 3D трансформаціями -->
+            <section id="catalog" class="product-catalog">
+                <div class="product-grid 3d-hover-grid">
+                    <!-- Динамічні картки продуктів -->
+                </div>
+            </section>
+
+            <!-- Інші секції -->
+        </main>
+    </div>
+
+    <!-- Бібліотеки анімацій -->
+    <script src="libs/gsap.min.js"></script>
+    <script src="libs/three.min.js"></script>
+    <script src="libs/framer-motion.min.js"></script>
+
+    <!-- Власні скрипти -->
+    <script src="js/animations.js"></script>
+    <script src="js/gsap-animations.js"></script>
+    <script src="js/interactive-effects.js"></script>
+</body>
+</html>
