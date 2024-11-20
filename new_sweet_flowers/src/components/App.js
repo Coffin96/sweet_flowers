@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import ProductList from './ProductList';
@@ -8,6 +8,7 @@ import Slider from './Slider';
 import ReviewSystem from './ReviewSystem';
 import OrderForm from './OrderForm';
 import AdminPanel from './AdminPanel';
+import Login from './Login';
 import ProductManager from '../utils/ProductManager';
 import '../styles/App.scss';
 
@@ -15,10 +16,15 @@ function App() {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const productManager = new ProductManager();
 
     useEffect(() => {
         fetchProducts();
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsAuthenticated(true);
+        }
     }, []);
 
     const fetchProducts = async () => {
@@ -43,6 +49,11 @@ function App() {
                     <ul>
                         <li><Link to="/">Головна</Link></li>
                         <li><Link to="/admin">Адмін-панель</Link></li>
+                        {!isAuthenticated && <li><Link to="/login">Вхід</Link></li>}
+                        {isAuthenticated && <li><button onClick={() => {
+                            localStorage.removeItem('token');
+                            setIsAuthenticated(false);
+                        }}>Вихід</button></li>}
                     </ul>
                 </nav>
                 <Switch>
@@ -56,6 +67,7 @@ function App() {
                             <section id="products">
                                 <h2>Наші букети</h2>
                                 <ProductList 
+                                    products={products}
                                     onAddToCart={handleAddToCart}
                                     onQuickView={handleQuickView}
                                 />
@@ -103,7 +115,10 @@ function App() {
                         </main>
                     </Route>
                     <Route path="/admin">
-                        <AdminPanel />
+                        {isAuthenticated ? <AdminPanel /> : <Redirect to="/login" />}
+                    </Route>
+                    <Route path="/login">
+                        <Login setIsAuthenticated={setIsAuthenticated} />
                     </Route>
                 </Switch>
                 <Footer />
