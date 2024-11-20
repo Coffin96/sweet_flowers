@@ -1556,3 +1556,148 @@
 722 silly packumentCache corgi:https://registry.npmjs.org/ip cache-miss
 723 silly packumentCache corgi:https://registry.npmjs.org/node-forge cache-miss
 724 silly packumentCache corgi:https://registry.npmjs.org/webpack-dev-middleware cache-miss
+725 http fetch GET 200 https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz 678ms (cache miss)
+726 http fetch GET 200 https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz 680ms (cache miss)
+727 http fetch GET 200 https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz 677ms (cache miss)
+728 http fetch GET 200 https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz 678ms (cache miss)
+729 http fetch GET 200 https://registry.npmjs.org/unique-slug/-/unique-slug-2.0.2.tgz 678ms (cache miss)
+730 http fetch GET 200 https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz 722ms (cache miss)
+731 http fetch GET 200 https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz 782ms (cache miss)
+732 http fetch GET 200 https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz 780ms (cache miss)
+733 http fetch GET 200 https://registry.npmjs.org/tar-fs/-/tar-fs-2.1.1.tgz 838ms (cache miss)
+734 http fetch GET 200 https://registry.npmjs.org/ini/-/ini-1.3.8.tgz 840ms (cache miss)
+735 http fetch GET 200 https://registry.npmjs.org/simple-concat/-/simple-concat-1.0.1.tgz 847ms (cache miss)
+736 http fetch GET 200 https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz 840ms (cache miss)
+737 http fetch GET 200 https://registry.npmjs.org/node-abi/-/node-abi-3.71.0.tgz 905ms (cache miss)
+738 http fetch GET 200 https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz 915ms (cache miss)
+739 http fetch GET 200 https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz 908ms (cache miss)
+740 http fetch GET 200 https://registry.npmjs.org/simple-get/-/simple-get-4.0.1.tgz 907ms (cache miss)
+741 http fetch GET 200 https://registry.npmjs.org/braces 693ms (cache hit)
+742 silly packumentCache corgi:https://registry.npmjs.org/braces set size:35919 disposed:false
+743 http fetch GET 200 https://registry.npmjs.org/micromatch 695ms (cache hit)
+744 silly packumentCache corgi:https://registry.npmjs.org/micromatch set size:71776 disposed:false
+745 http fetch GET 200 https://registry.npmjs.org/webpack-dev-middleware 695ms (cache hit)
+746 silly packumentCache corgi:https://registry.npmjs.org/webpack-dev-middleware set size:163343 disposed:false
+747 http fetch GET 200 https://registry.npmjs.org/node-forge 702ms (cache hit)
+748 silly packumentCache corgi:https://registry.npmjs.org/node-forge set size:102838 disposed:false
+749 http fetch GET 200 https://registry.npmjs.org/ip 711ms (cache hit)
+750 silly packumentCache corgi:https://registry.npmjs.org/ip set size:17316 disposed:false
+751 http fetch GET 200 https://registry.npmjs.org/axios 714ms (cache hit)
+752 silly packumentCache corgi:https://registry.npmjs.org/axios set size:217819 disposed:false
+753 http fetch GET 200 https://registry.npmjs.org/http-proxy-middleware 717ms (cache hit)
+754 silly packumentCache corgi:https://registry.npmjs.org/http-proxy-middleware set size:139529 disposed:false
+755 silly packumentCache corgi:https://registry.npmjs.org/chokidar cache-miss
+756 http fetch GET 200 https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 1030ms (cache miss)
+757 http fetch GET 200 https://registry.npmjs.org/github-from-package/-/github-from-package-0.0.0.tgz 1008ms (cache miss)
+758 http fetch GET 200 https://registry.npmjs.org/expand-template/-/expand-template-2.0.3.tgz 1008ms (cache miss)
+759 http fetch GET 200 https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz 1006ms (cache miss)
+760 http fetch GET 200 https://registry.npmjs.org/napi-build-utils/-/napi-build-utils-1.0.2.tgz 1011ms (cache miss)
+761 http fetch GET 200 https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz 1007ms (cache miss)
+762 http fetch GET 200 https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz 1031ms (cache miss)
+763 http fetch GET 200 https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz 1070ms (cache miss)
+764 http fetch GET 200 https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz 1075ms (cache miss)
+765 http fetch GET 200 https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz 1049ms (cache miss)
+766 http fetch GET 200 https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz 1046ms (cache miss)
+767 http fetch GET 200 https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz 1043ms (cache miss)
+768 http fetch GET 200 https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz 1076ms (cache miss)
+769 http fetch GET 200 https://registry.npmjs.org/promise-inflight/-/promise-inflight-1.0.1.tgz 1063ms (cache miss)
+770 http fetch GET 200 https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz 1068ms (cache miss)
+771 http fetch GET 200 https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz 1070ms (cache miss)
+772 http fetch GET 200 https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz 1103ms (cache miss)
+773 http fetch GET 200 https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz 1100ms (cache miss)
+774 http fetch GET 200 https://registry.npmjs.org/infer-owner/-/infer-owner-1.0.4.tgz 1093ms (cache miss)
+775 http fetch GET 200 https://registry.npmjs.org/humanize-ms/-/humanize-ms-1.2.1.tgz 1083ms (cache miss)
+776 http fetch GET 200 https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz 1121ms (cache miss)
+777 http fetch GET 200 https://registry.npmjs.org/@tootallnate/once/-/once-1.1.2.tgz 1119ms (cache miss)
+778 http fetch GET 200 https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz 1116ms (cache miss)
+779 http fetch GET 200 https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz 1110ms (cache miss)
+780 http fetch GET 200 https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-6.2.1.tgz 1106ms (cache miss)
+781 http fetch GET 200 https://registry.npmjs.org/minipass-collect/-/minipass-collect-1.0.2.tgz 1103ms (cache miss)
+782 http fetch GET 200 https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-3.0.1.tgz 1145ms (cache miss)
+783 warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+784 http fetch GET 200 https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz 1126ms (cache miss)
+785 http fetch GET 200 https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz 1125ms (cache miss)
+786 http fetch GET 200 https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz 1128ms (cache miss)
+787 http fetch GET 200 https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.1.1.tgz 1122ms (cache miss)
+788 http fetch GET 200 https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz 1124ms (cache miss)
+789 http fetch GET 200 https://registry.npmjs.org/@npmcli/move-file/-/move-file-1.1.2.tgz 1133ms (cache miss)
+790 warn deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+791 http fetch GET 200 https://registry.npmjs.org/tar-stream/-/tar-stream-2.2.0.tgz 1191ms (cache miss)
+792 http fetch GET 200 https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz 1149ms (cache miss)
+793 http fetch GET 200 https://registry.npmjs.org/is-lambda/-/is-lambda-1.0.1.tgz 1139ms (cache miss)
+794 http fetch GET 200 https://registry.npmjs.org/npmlog/-/npmlog-6.0.2.tgz 1134ms (cache miss)
+795 warn deprecated npmlog@6.0.2: This package is no longer supported.
+796 http fetch GET 200 https://registry.npmjs.org/nopt/-/nopt-5.0.0.tgz 1134ms (cache miss)
+797 http fetch GET 200 https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.1.2.tgz 1131ms (cache miss)
+798 http fetch GET 200 https://registry.npmjs.org/sequelize-pool/-/sequelize-pool-7.1.0.tgz 1141ms (cache miss)
+799 http fetch GET 200 https://registry.npmjs.org/pg-connection-string/-/pg-connection-string-2.7.0.tgz 1132ms (cache miss)
+800 http fetch GET 200 https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz 1158ms (cache miss)
+801 http fetch GET 200 https://registry.npmjs.org/@types/ms/-/ms-0.7.34.tgz 1158ms (cache miss)
+802 http fetch GET 200 https://registry.npmjs.org/inflection/-/inflection-1.13.4.tgz 1145ms (cache miss)
+803 http fetch GET 200 https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-7.0.4.tgz 1148ms (cache miss)
+804 http fetch GET 200 https://registry.npmjs.org/@types/debug/-/debug-4.1.12.tgz 1144ms (cache miss)
+805 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 1146ms (cache miss)
+806 http fetch GET 200 https://registry.npmjs.org/chownr/-/chownr-1.1.4.tgz 1150ms (cache miss)
+807 http fetch GET 200 https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz 1148ms (cache miss)
+808 http fetch GET 200 https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz 1187ms (cache miss)
+809 http fetch GET 200 https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz 1163ms (cache miss)
+810 http fetch GET 200 https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz 1159ms (cache miss)
+811 http fetch GET 200 https://registry.npmjs.org/dottie/-/dottie-2.0.6.tgz 1181ms (cache miss)
+812 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz 1174ms (cache miss)
+813 http fetch GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 1168ms (cache miss)
+814 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+815 http fetch GET 200 https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz 1168ms (cache miss)
+816 http fetch GET 200 https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz 1166ms (cache miss)
+817 http fetch GET 200 https://registry.npmjs.org/detect-libc/-/detect-libc-2.0.3.tgz 1173ms (cache miss)
+818 http fetch GET 200 https://registry.npmjs.org/rc/-/rc-1.2.8.tgz 1265ms (cache miss)
+819 http fetch GET 200 https://registry.npmjs.org/toposort-class/-/toposort-class-1.0.1.tgz 1225ms (cache miss)
+820 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 1194ms (cache miss)
+821 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 1200ms (cache miss)
+822 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 1199ms (cache miss)
+823 http fetch GET 200 https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz 1195ms (cache miss)
+824 http fetch GET 200 https://registry.npmjs.org/jsbn/-/jsbn-1.1.0.tgz 1299ms (cache miss)
+825 http fetch GET 200 https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 1268ms (cache miss)
+826 http fetch GET 200 https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz 1207ms (cache miss)
+827 http fetch GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 1200ms (cache miss)
+828 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+829 http fetch GET 200 https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz 1211ms (cache miss)
+830 http fetch GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 1219ms (cache miss)
+831 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+832 http fetch GET 200 https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz 1312ms (cache miss)
+833 http fetch GET 200 https://registry.npmjs.org/chokidar 319ms (cache hit)
+834 silly packumentCache corgi:https://registry.npmjs.org/chokidar set size:116913 disposed:false
+835 silly packumentCache corgi:https://registry.npmjs.org/anymatch cache-miss
+836 silly packumentCache corgi:https://registry.npmjs.org/readdirp cache-miss
+837 http fetch GET 200 https://registry.npmjs.org/ssri/-/ssri-8.0.1.tgz 1278ms (cache miss)
+838 http fetch GET 200 https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 1271ms (cache miss)
+839 http fetch GET 200 https://registry.npmjs.org/bl/-/bl-4.1.0.tgz 1336ms (cache miss)
+840 http fetch GET 200 https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.5.0.tgz 1295ms (cache miss)
+841 http fetch GET 200 https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-1.4.1.tgz 1309ms (cache miss)
+842 http fetch GET 200 https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz 1270ms (cache miss)
+843 http fetch GET 200 https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz 1388ms (cache miss)
+844 http fetch GET 200 https://registry.npmjs.org/unique-filename/-/unique-filename-1.1.1.tgz 1360ms (cache miss)
+845 http fetch GET 200 https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz 1303ms (cache miss)
+846 http fetch GET 200 https://registry.npmjs.org/gauge/-/gauge-4.0.4.tgz 1383ms (cache miss)
+847 warn deprecated gauge@4.0.4: This package is no longer supported.
+848 http fetch GET 200 https://registry.npmjs.org/@npmcli/fs/-/fs-1.1.1.tgz 1381ms (cache miss)
+849 http fetch GET 200 https://registry.npmjs.org/readdirp 114ms (cache hit)
+850 silly packumentCache corgi:https://registry.npmjs.org/readdirp set size:43370 disposed:false
+851 http fetch GET 200 https://registry.npmjs.org/anymatch 116ms (cache hit)
+852 silly packumentCache corgi:https://registry.npmjs.org/anymatch set size:18345 disposed:false
+853 silly packumentCache corgi:https://registry.npmjs.org/webpack-dev-server cache-miss
+854 http fetch GET 200 https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-9.1.0.tgz 1383ms (cache miss)
+855 http fetch GET 200 https://registry.npmjs.org/wkx/-/wkx-0.5.0.tgz 1418ms (cache miss)
+856 http fetch GET 200 https://registry.npmjs.org/cacache/-/cacache-15.3.0.tgz 1444ms (cache miss)
+857 http fetch GET 200 https://registry.npmjs.org/socks/-/socks-2.8.3.tgz 1509ms (cache miss)
+858 http fetch GET 200 https://registry.npmjs.org/ip-address/-/ip-address-9.0.5.tgz 1512ms (cache miss)
+859 http fetch GET 200 https://registry.npmjs.org/webpack-dev-server 78ms (cache hit)
+860 silly packumentCache corgi:https://registry.npmjs.org/webpack-dev-server set size:446062 disposed:false
+861 silly packumentCache corgi:https://registry.npmjs.org/dns-packet cache-miss
+862 http fetch GET 200 https://registry.npmjs.org/tar/-/tar-6.2.1.tgz 1487ms (cache miss)
+863 http fetch GET 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz 1487ms (cache miss)
+864 http fetch GET 200 https://registry.npmjs.org/dns-packet 49ms (cache hit)
+865 silly packumentCache corgi:https://registry.npmjs.org/dns-packet set size:47403 disposed:false
+866 silly packumentCache corgi:https://registry.npmjs.org/selfsigned cache-miss
+867 http fetch GET 200 https://registry.npmjs.org/selfsigned 42ms (cache hit)
+868 silly packumentCache corgi:https://registry.npmjs.org/selfsigned set size:31119 disposed:false
+869 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns cache-miss
