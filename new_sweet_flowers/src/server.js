@@ -5,6 +5,7 @@ const initDatabase = require('./db/init');
 const Product = require('./db/models/Product');
 const User = require('./db/models/User');
 const { Order, OrderItem } = require('./db/models/Order');
+const Review = require('./db/models/Review');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -38,67 +39,40 @@ const authenticateJWT = (req, res, next) => {
 
 // ... (попередній код залишається без змін)
 
-// API маршрути для замовлень
+// API маршрути для відгуків
 
-// Створити нове замовлення
-app.post('/api/orders', async (req, res) => {
+// Отримати відгуки для продукту
+app.get('/api/products/:productId/reviews', async (req, res) => {
     try {
-        const { customerName, customerEmail, customerPhone, items } = req.body;
-        
-        const order = await Order.create({
-            customerName,
-            customerEmail,
-            customerPhone,
-            totalAmount: items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+        const reviews = await Review.findAll({
+            where: { ProductId: req.params.productId },
+            order: [['createdAt', 'DESC']]
         });
-
-        for (const item of items) {
-            await OrderItem.create({
-                OrderId: order.id,
-                ProductId: item.productId,
-                quantity: item.quantity,
-                price: item.price
-            });
-        }
-
-        res.status(201).json(order);
+        res.json(reviews);
     } catch (error) {
-        console.error('Error creating order', error);
-        res.status(400).json({ error: 'Error creating order' });
+        console.error('Error fetching reviews', error);
+        res.status(500).json({ error: 'Error fetching reviews' });
     }
 });
 
-// Отримати всі замовлення (тільки для адміністратора)
-app.get('/api/admin/orders', authenticateJWT, async (req, res) => {
+// Додати новий відгук
+app.post('/api/products/:productId/reviews', async (req, res) => {
     try {
-        const orders = await Order.findAll({
-            include: [{ model: OrderItem, include: [Product] }]
+        const { rating, comment, author } = req.body;
+        const review = await Review.create({
+            rating,
+            comment,
+            author,
+            ProductId: req.params.productId
         });
-        res.json(orders);
+        res.status(201).json(review);
     } catch (error) {
-        console.error('Error fetching orders', error);
-        res.status(500).json({ error: 'Error fetching orders' });
+        console.error('Error creating review', error);
+        res.status(400).json({ error: 'Error creating review' });
     }
 });
 
-// Оновити статус замовлення (тільки для адміністратора)
-app.put('/api/admin/orders/:id', authenticateJWT, async (req, res) => {
-    try {
-        const { status } = req.body;
-        const [updated] = await Order.update({ status }, {
-            where: { id: req.params.id }
-        });
-        if (updated) {
-            const updatedOrder = await Order.findByPk(req.params.id);
-            res.json(updatedOrder);
-        } else {
-            res.status(404).json({ error: 'Order not found' });
-        }
-    } catch (error) {
-        console.error('Error updating order', error);
-        res.status(400).json({ error: 'Error updating order' });
-    }
-});
+// ... (попередній код залишається без змін)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
