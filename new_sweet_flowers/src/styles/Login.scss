@@ -4,13 +4,13 @@
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: -color;
+    background-color: $secondary-color;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     h2 {
         text-align: center;
-        color: -color;
+        color: $primary-color;
         margin-bottom: 20px;
     }
 
@@ -21,13 +21,13 @@
         input {
             margin-bottom: 15px;
             padding: 10px;
-            border: 1px solid -color;
+            border: 1px solid $primary-color;
             border-radius: 5px;
             font-size: 16px;
         }
 
         button {
-            background-color: -color;
+            background-color: $primary-color;
             color: white;
             border: none;
             padding: 10px;
@@ -37,7 +37,7 @@
             transition: background-color 0.3s ease;
 
             &:hover {
-                background-color: darken(-color, 10%);
+                background-color: darken($primary-color, 10%);
             }
         }
     }
