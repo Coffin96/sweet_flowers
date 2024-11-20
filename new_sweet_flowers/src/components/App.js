@@ -17,6 +17,7 @@ function App() {
     const [cart, setCart] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [orderCompleted, setOrderCompleted] = useState(false);
     const productManager = new ProductManager();
 
     useEffect(() => {
@@ -39,6 +40,11 @@ function App() {
     const handleQuickView = async (productId) => {
         const product = await productManager.getProductById(productId);
         setSelectedProduct(product);
+    };
+
+    const handleOrderComplete = () => {
+        setOrderCompleted(true);
+        setCart([]);
     };
 
     return (
@@ -85,10 +91,17 @@ function App() {
                                     <ReviewSystem productId={selectedProduct.id} />
                                 </section>
                             )}
-                            <section id="order">
-                                <h2>Оформлення замовлення</h2>
-                                <OrderForm cart={cart} />
-                            </section>
+                            {cart.length > 0 && !orderCompleted && (
+                                <section id="order">
+                                    <OrderForm cart={cart} onOrderComplete={handleOrderComplete} />
+                                </section>
+                            )}
+                            {orderCompleted && (
+                                <section id="order-completed">
+                                    <h2>Дякуємо за ваше замовлення!</h2>
+                                    <p>Ми зв'яжемося з вами найближчим часом для підтвердження замовлення.</p>
+                                </section>
+                            )}
                             <section id="contacts">
                                 <h2>Зв'яжіться з нами</h2>
                                 <div className="contact-info">
