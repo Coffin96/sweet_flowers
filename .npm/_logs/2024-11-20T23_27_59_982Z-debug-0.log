@@ -10553,3 +10553,12 @@
 8767 http fetch GET 200 https://registry.npmjs.org/jest-watch-typeahead 61ms (cache miss)
 8768 silly packumentCache corgi:https://registry.npmjs.org/jest-watch-typeahead set size:undefined disposed:false
 8769 http fetch GET 200 https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz 26279ms (cache miss)
+8770 http fetch GET 200 https://registry.npmjs.org/date-fns/-/date-fns-2.30.0.tgz 33411ms (cache miss)
+8771 info run core-js@3.39.0 postinstall node_modules/core-js node -e "try{require('./postinstall')}catch(e){}"
+8772 info run ejs@2.7.4 postinstall node_modules/ejs node ./postinstall.js
+8773 info run es5-ext@0.10.64 postinstall node_modules/es5-ext  node -e "try{require('./_postinstall')}catch(e){}" || exit 0
+8774 info run core-js@2.6.12 postinstall node_modules/babel-runtime/node_modules/core-js node -e "try{require('./postinstall')}catch(e){}"
+8775 info run core-js@3.39.0 postinstall { code: 0, signal: null }
+8776 info run ejs@2.7.4 postinstall { code: 0, signal: null }
+8777 info run core-js@2.6.12 postinstall { code: 0, signal: null }
+8778 info run es5-ext@0.10.64 postinstall { code: 0, signal: null }
