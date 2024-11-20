@@ -1846,3 +1846,9 @@
 1012 silly ADD
 1013 silly ADD
 1014 silly ADD
+1015 verbose cwd /home/user/new_sweet_flowers
+1016 verbose os Linux 5.10.186+
+1017 verbose node v20.18.0
+1018 verbose npm  v10.8.2
+1019 verbose exit 0
+1020 info ok
