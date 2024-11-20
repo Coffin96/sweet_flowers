@@ -9,3 +9,8 @@
 8 verbose argv "install" "sqlite3" "sequelize"
 9 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2024-11-20T23_08_56_503Z-
 10 verbose logfile /home/user/.npm/_logs/2024-11-20T23_08_56_503Z-debug-0.log
+11 silly packumentCache heap:2114453504 maxSize:528613376 maxEntrySize:264306688
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest sqlite3@*
+15 silly packumentCache full:https://registry.npmjs.org/sqlite3 cache-miss
