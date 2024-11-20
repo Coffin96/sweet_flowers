@@ -63,11 +63,25 @@ app.use('/api/admin', authenticateJWT);
 
 // API маршрути
 
-// Отримати всі продукти
+// Отримати всі продукти з пагінацією
 app.get('/api/products', async (req, res) => {
     try {
-        const products = await Product.findAll();
-        res.json(products);
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+        const offset = (page - 1) * limit;
+
+        const { count, rows } = await Product.findAndCountAll({
+            limit: limit,
+            offset: offset,
+            order: [['createdAt', 'DESC']]
+        });
+
+        res.json({
+            products: rows,
+            currentPage: page,
+            totalPages: Math.ceil(count / limit),
+            totalItems: count
+        });
     } catch (error) {
         res.status(500).json({ error: 'Error fetching products' });
     }
