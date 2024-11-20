@@ -1,32 +1,50 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/ReviewSystem.scss';
+
+const API_URL = 'https://api.example.com'; // Замініть на URL вашого API
 
 const ReviewSystem = ({ productId }) => {
     const [reviews, setReviews] = useState([]);
     const [averageRating, setAverageRating] = useState(0);
+    const [newReview, setNewReview] = useState({ username: '', rating: 5, comment: '' });
 
     useEffect(() => {
-        // Тут ми б зазвичай робили запит до API для отримання відгуків
-        // Для прикладу, використаємо моковані дані
-        const mockReviews = [
-            { id: 1, username: 'Анна', rating: 5, comment: 'Чудовий букет!' },
-            { id: 2, username: 'Петро', rating: 4, comment: 'Дуже гарний, але трохи запізнилися з доставкою.' },
-        ];
-        setReviews(mockReviews);
-        setAverageRating(mockReviews.reduce((sum, review) => sum + review.rating, 0) / mockReviews.length);
+        fetchReviews();
     }, [productId]);
 
-    const handleSubmitReview = (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const newReview = {
-            id: reviews.length + 1,
-            username: formData.get('username'),
-            rating: parseInt(formData.get('rating')),
-            comment: formData.get('comment')
-        };
-        setReviews([...reviews, newReview]);
-        // Тут би ми відправляли новий відгук на сервер
+    const fetchReviews = async () => {
+        try {
+            const response = await axios.get(`${API_URL}/products/${productId}/reviews`);
+            setReviews(response.data);
+            calculateAverageRating(response.data);
+        } catch (error) {
+            console.error('Помилка при завантаженні відгуків', error);
+        }
+    };
+
+    const calculateAverageRating = (reviews) => {
+        if (reviews.length === 0) {
+            setAverageRating(0);
+            return;
+        }
+        const sum = reviews.reduce((acc, review) => acc + review.rating, 0);
+        setAverageRating(sum / reviews.length);
+    };
+
+    const handleInputChange = (e) => {
+        setNewReview({ ...newReview, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmitReview = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post(`${API_URL}/products/${productId}/reviews`, newReview);
+            fetchReviews();
+            setNewReview({ username: '', rating: 5, comment: '' });
+        } catch (error) {
+            console.error('Помилка при додаванні відгуку', error);
+        }
     };
 
     return (
@@ -39,16 +57,33 @@ const ReviewSystem = ({ productId }) => {
                 ))}
             </div>
             <form onSubmit={handleSubmitReview}>
-                <input type="text" name="username" placeholder="Ваше ім'я" required />
-                <select name="rating" required>
-                    <option value="">Оберіть рейтинг</option>
+                <input
+                    type="text"
+                    name="username"
+                    value={newReview.username}
+                    onChange={handleInputChange}
+                    placeholder="Ваше ім'я"
+                    required
+                />
+                <select
+                    name="rating"
+                    value={newReview.rating}
+                    onChange={handleInputChange}
+                    required
+                >
                     <option value="1">1 зірка</option>
                     <option value="2">2 зірки</option>
                     <option value="3">3 зірки</option>
                     <option value="4">4 зірки</option>
                     <option value="5">5 зірок</option>
                 </select>
-                <textarea name="comment" placeholder="Ваш відгук" required></textarea>
+                <textarea
+                    name="comment"
+                    value={newReview.comment}
+                    onChange={handleInputChange}
+                    placeholder="Ваш відгук"
+                    required
+                ></textarea>
                 <button type="submit">Надіслати відгук</button>
             </form>
             <div className="reviews-list">
