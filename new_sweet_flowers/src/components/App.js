@@ -9,6 +9,7 @@ import ReviewSystem from './ReviewSystem';
 import OrderForm from './OrderForm';
 import AdminPanel from './AdminPanel';
 import Login from './Login';
+import Toast from './Toast';
 import ProductManager from '../utils/ProductManager';
 import '../styles/App.scss';
 
@@ -18,6 +19,7 @@ function App() {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [orderCompleted, setOrderCompleted] = useState(false);
+    const [toast, setToast] = useState(null);
     const productManager = new ProductManager();
 
     useEffect(() => {
@@ -29,22 +31,36 @@ function App() {
     }, []);
 
     const fetchProducts = async () => {
-        const fetchedProducts = await productManager.fetchProducts();
-        setProducts(fetchedProducts);
+        try {
+            const fetchedProducts = await productManager.fetchProducts();
+            setProducts(fetchedProducts);
+        } catch (error) {
+            showToast('Помилка при завантаженні продуктів', 'error');
+        }
     };
 
     const handleAddToCart = (product) => {
         setCart(prevCart => [...prevCart, product]);
+        showToast('Товар додано до кошика', 'success');
     };
 
     const handleQuickView = async (productId) => {
-        const product = await productManager.getProductById(productId);
-        setSelectedProduct(product);
+        try {
+            const product = await productManager.getProductById(productId);
+            setSelectedProduct(product);
+        } catch (error) {
+            showToast('Помилка при завантаженні деталей продукту', 'error');
+        }
     };
 
     const handleOrderComplete = () => {
         setOrderCompleted(true);
         setCart([]);
+        showToast('Замовлення успішно оформлено', 'success');
+    };
+
+    const showToast = (message, type = 'info') => {
+        setToast({ message, type });
     };
 
     return (
@@ -59,6 +75,7 @@ function App() {
                         {isAuthenticated && <li><button onClick={() => {
                             localStorage.removeItem('token');
                             setIsAuthenticated(false);
+                            showToast('Ви вийшли з системи', 'info');
                         }}>Вихід</button></li>}
                     </ul>
                 </nav>
@@ -131,10 +148,17 @@ function App() {
                         {isAuthenticated ? <AdminPanel /> : <Redirect to="/login" />}
                     </Route>
                     <Route path="/login">
-                        <Login setIsAuthenticated={setIsAuthenticated} />
+                        <Login setIsAuthenticated={setIsAuthenticated} showToast={showToast} />
                     </Route>
                 </Switch>
                 <Footer />
+                {toast && (
+                    <Toast
+                        message={toast.message}
+                        type={toast.type}
+                        onClose={() => setToast(null)}
+                    />
+                )}
             </div>
         </Router>
     );
