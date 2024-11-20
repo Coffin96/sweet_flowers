@@ -13,19 +13,41 @@ function App() {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const productManager = new ProductManager();
-        productManager.fetchProducts().then(setProducts);
+        const fetchProducts = async () => {
+            const productManager = new ProductManager();
+            try {
+                const fetchedProducts = await productManager.fetchProducts();
+                setProducts(fetchedProducts);
+                setLoading(false);
+            } catch (err) {
+                setError('Помилка при завантаженні продуктів. Будь ласка, спробуйте пізніше.');
+                setLoading(false);
+            }
+        };
+
+        fetchProducts();
     }, []);
 
     const handleAddToCart = (product) => {
         setCart(prevCart => [...prevCart, product]);
     };
 
-    const handleQuickView = (product) => {
-        setSelectedProduct(product);
+    const handleQuickView = async (productId) => {
+        const productManager = new ProductManager();
+        try {
+            const product = await productManager.getProductById(productId);
+            setSelectedProduct(product);
+        } catch (err) {
+            console.error('Помилка при завантаженні деталей продукту', err);
+        }
     };
+
+    if (loading) return <div>Завантаження...</div>;
+    if (error) return <div>{error}</div>;
 
     return (
         <div className="app-container">
