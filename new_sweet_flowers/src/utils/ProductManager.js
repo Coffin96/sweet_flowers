@@ -3,13 +3,13 @@ import axios from 'axios';
 const API_URL = 'http://localhost:3001/api'; // Змініть на відповідний URL вашого API
 
 export default class ProductManager {
-    async fetchProducts() {
+    async fetchProducts(page = 1, limit = 10) {
         try {
-            const response = await axios.get(`${API_URL}/products`);
+            const response = await axios.get(`${API_URL}/products?page=${page}&limit=${limit}`);
             return response.data;
         } catch (error) {
             console.error('Помилка при завантаженні продуктів', error);
-            return [];
+            return { products: [], currentPage: 1, totalPages: 1, totalItems: 0 };
         }
     }
 
@@ -25,7 +25,10 @@ export default class ProductManager {
 
     async createProduct(productData) {
         try {
-            const response = await axios.post(`${API_URL}/products`, productData);
+            const token = localStorage.getItem('token');
+            const response = await axios.post(`${API_URL}/admin/products`, productData, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
             return response.data;
         } catch (error) {
             console.error('Помилка при створенні продукту', error);
@@ -35,7 +38,10 @@ export default class ProductManager {
 
     async updateProduct(id, productData) {
         try {
-            const response = await axios.put(`${API_URL}/products/${id}`, productData);
+            const token = localStorage.getItem('token');
+            const response = await axios.put(`${API_URL}/admin/products/${id}`, productData, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
             return response.data;
         } catch (error) {
             console.error(`Помилка при оновленні продукту з id ${id}`, error);
@@ -45,7 +51,10 @@ export default class ProductManager {
 
     async deleteProduct(id) {
         try {
-            await axios.delete(`${API_URL}/products/${id}`);
+            const token = localStorage.getItem('token');
+            await axios.delete(`${API_URL}/admin/products/${id}`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
         } catch (error) {
             console.error(`Помилка при видаленні продукту з id ${id}`, error);
             throw error;
