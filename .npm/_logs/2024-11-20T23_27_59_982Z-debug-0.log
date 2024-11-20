@@ -10494,3 +10494,61 @@
 8708 http fetch GET 200 https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz 21088ms (cache miss)
 8709 warn deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
 8710 http fetch GET 200 https://registry.npmjs.org/es-abstract/-/es-abstract-1.23.5.tgz 22322ms (cache miss)
+8711 silly packumentCache corgi:https://registry.npmjs.org/watchpack cache-miss
+8712 http fetch GET 200 https://registry.npmjs.org/watchpack 85ms (cache miss)
+8713 silly packumentCache corgi:https://registry.npmjs.org/watchpack set size:undefined disposed:false
+8714 silly packumentCache corgi:https://registry.npmjs.org/@jest%2ftransform cache-miss
+8715 silly packumentCache corgi:https://registry.npmjs.org/@jest%2fcore cache-miss
+8716 silly packumentCache corgi:https://registry.npmjs.org/@jest%2freporters cache-miss
+8717 silly packumentCache corgi:https://registry.npmjs.org/jest-runner cache-miss
+8718 silly packumentCache corgi:https://registry.npmjs.org/jest-runtime cache-miss
+8719 silly packumentCache corgi:https://registry.npmjs.org/jest-snapshot cache-miss
+8720 silly packumentCache corgi:https://registry.npmjs.org/@jest%2ftest-sequencer cache-miss
+8721 http fetch GET 200 https://registry.npmjs.org/@jest%2ftest-sequencer 163ms (cache miss)
+8722 silly packumentCache corgi:https://registry.npmjs.org/@jest%2ftest-sequencer set size:undefined disposed:false
+8723 http fetch GET 200 https://registry.npmjs.org/jest-snapshot 286ms (cache miss)
+8724 silly packumentCache corgi:https://registry.npmjs.org/jest-snapshot set size:undefined disposed:false
+8725 http fetch GET 200 https://registry.npmjs.org/jest-runner 316ms (cache miss)
+8726 silly packumentCache corgi:https://registry.npmjs.org/jest-runner set size:undefined disposed:false
+8727 http fetch GET 200 https://registry.npmjs.org/@jest%2ftransform 360ms (cache miss)
+8728 silly packumentCache corgi:https://registry.npmjs.org/@jest%2ftransform set size:undefined disposed:false
+8729 http fetch GET 200 https://registry.npmjs.org/@jest%2freporters 366ms (cache miss)
+8730 silly packumentCache corgi:https://registry.npmjs.org/@jest%2freporters set size:undefined disposed:false
+8731 http fetch GET 200 https://registry.npmjs.org/@jest%2fcore 375ms (cache miss)
+8732 silly packumentCache corgi:https://registry.npmjs.org/@jest%2fcore set size:undefined disposed:false
+8733 http fetch GET 200 https://registry.npmjs.org/jest-runtime 381ms (cache miss)
+8734 silly packumentCache corgi:https://registry.npmjs.org/jest-runtime set size:undefined disposed:false
+8735 silly packumentCache corgi:https://registry.npmjs.org/bonjour cache-miss
+8736 http fetch GET 200 https://registry.npmjs.org/bonjour 23ms (cache hit)
+8737 silly packumentCache corgi:https://registry.npmjs.org/bonjour set size:8131 disposed:false
+8738 silly packumentCache corgi:https://registry.npmjs.org/@svgr%2fplugin-svgo cache-miss
+8739 http fetch GET 200 https://registry.npmjs.org/@svgr%2fplugin-svgo 116ms (cache miss)
+8740 silly packumentCache corgi:https://registry.npmjs.org/@svgr%2fplugin-svgo set size:undefined disposed:false
+8741 silly packumentCache corgi:https://registry.npmjs.org/jest-config cache-miss
+8742 http fetch GET 200 https://registry.npmjs.org/jest-config 118ms (cache miss)
+8743 silly packumentCache corgi:https://registry.npmjs.org/jest-config set size:undefined disposed:false
+8744 silly packumentCache corgi:https://registry.npmjs.org/jest-circus cache-miss
+8745 silly packumentCache corgi:https://registry.npmjs.org/jest-resolve-dependencies cache-miss
+8746 silly packumentCache corgi:https://registry.npmjs.org/jest-jasmine2 cache-miss
+8747 http fetch GET 200 https://registry.npmjs.org/jest-resolve-dependencies 311ms (cache miss)
+8748 silly packumentCache corgi:https://registry.npmjs.org/jest-resolve-dependencies set size:undefined disposed:false
+8749 http fetch GET 200 https://registry.npmjs.org/jest-circus 334ms (cache miss)
+8750 silly packumentCache corgi:https://registry.npmjs.org/jest-circus set size:undefined disposed:false
+8751 http fetch GET 200 https://registry.npmjs.org/jest-jasmine2 364ms (cache miss)
+8752 silly packumentCache corgi:https://registry.npmjs.org/jest-jasmine2 set size:undefined disposed:false
+8753 silly packumentCache corgi:https://registry.npmjs.org/babel-jest cache-miss
+8754 http fetch GET 200 https://registry.npmjs.org/babel-jest 153ms (cache miss)
+8755 silly packumentCache corgi:https://registry.npmjs.org/babel-jest set size:undefined disposed:false
+8756 silly packumentCache corgi:https://registry.npmjs.org/jest cache-miss
+8757 silly packumentCache corgi:https://registry.npmjs.org/jest-cli cache-miss
+8758 http fetch GET 200 https://registry.npmjs.org/jest 125ms (cache miss)
+8759 silly packumentCache corgi:https://registry.npmjs.org/jest set size:undefined disposed:false
+8760 http fetch GET 200 https://registry.npmjs.org/core-js/-/core-js-3.39.0.tgz 25490ms (cache miss)
+8761 http fetch GET 200 https://registry.npmjs.org/jest-cli 194ms (cache miss)
+8762 silly packumentCache corgi:https://registry.npmjs.org/jest-cli set size:undefined disposed:false
+8763 silly packumentCache corgi:https://registry.npmjs.org/@svgr%2fwebpack cache-miss
+8764 http fetch GET 200 https://registry.npmjs.org/@svgr%2fwebpack 84ms (cache miss)
+8765 silly packumentCache corgi:https://registry.npmjs.org/@svgr%2fwebpack set size:undefined disposed:false
+8766 silly packumentCache corgi:https://registry.npmjs.org/jest-watch-typeahead cache-miss
+8767 http fetch GET 200 https://registry.npmjs.org/jest-watch-typeahead 61ms (cache miss)
+8768 silly packumentCache corgi:https://registry.npmjs.org/jest-watch-typeahead set size:undefined disposed:false
