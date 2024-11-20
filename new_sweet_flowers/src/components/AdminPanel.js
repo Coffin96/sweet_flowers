@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import ProductManager from '../utils/ProductManager';
+import axios from 'axios';
 import '../styles/AdminPanel.scss';
 
 const AdminPanel = () => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', description: '', imageUrl: '' });
     const [editingProduct, setEditingProduct] = useState(null);
-    const productManager = new ProductManager();
 
     useEffect(() => {
         fetchProducts();
     }, []);
 
     const fetchProducts = async () => {
-        const fetchedProducts = await productManager.fetchProducts();
-        setProducts(fetchedProducts);
+        try {
+            const response = await axios.get('http://localhost:3001/api/products');
+            setProducts(response.data);
+        } catch (error) {
+            console.error('Error fetching products', error);
+        }
     };
 
     const handleInputChange = (e, isEditing = false) => {
@@ -29,31 +32,40 @@ const AdminPanel = () => {
     const handleAddProduct = async (e) => {
         e.preventDefault();
         try {
-            await productManager.createProduct(newProduct);
+            const token = localStorage.getItem('token');
+            await axios.post('http://localhost:3001/api/admin/products', newProduct, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
             setNewProduct({ name: '', price: '', description: '', imageUrl: '' });
             fetchProducts();
         } catch (error) {
-            console.error('Помилка при додаванні продукту', error);
+            console.error('Error adding product', error);
         }
     };
 
     const handleEditProduct = async (e) => {
         e.preventDefault();
         try {
-            await productManager.updateProduct(editingProduct.id, editingProduct);
+            const token = localStorage.getItem('token');
+            await axios.put(`http://localhost:3001/api/admin/products/${editingProduct.id}`, editingProduct, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
             setEditingProduct(null);
             fetchProducts();
         } catch (error) {
-            console.error('Помилка при редагуванні продукту', error);
+            console.error('Error editing product', error);
         }
     };
 
     const handleDeleteProduct = async (id) => {
         try {
-            await productManager.deleteProduct(id);
+            const token = localStorage.getItem('token');
+            await axios.delete(`http://localhost:3001/api/admin/products/${id}`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
             fetchProducts();
         } catch (error) {
-            console.error('Помилка при видаленні продукту', error);
+            console.error('Error deleting product', error);
         }
     };
 
