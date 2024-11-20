@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import ProductManager from '../utils/ProductManager';
 import '../styles/AdminPanel.scss';
-
-const API_URL = 'https://api.example.com'; // Замініть на URL вашого API
 
 const AdminPanel = () => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', description: '', imageUrl: '' });
     const [editingProduct, setEditingProduct] = useState(null);
+    const productManager = new ProductManager();
 
     useEffect(() => {
         fetchProducts();
     }, []);
 
     const fetchProducts = async () => {
-        try {
-            const response = await axios.get(`${API_URL}/products`);
-            setProducts(response.data);
-        } catch (error) {
-            console.error('Помилка при завантаженні продуктів', error);
-        }
+        const fetchedProducts = await productManager.fetchProducts();
+        setProducts(fetchedProducts);
     };
 
     const handleInputChange = (e, isEditing = false) => {
@@ -34,7 +29,7 @@ const AdminPanel = () => {
     const handleAddProduct = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${API_URL}/products`, newProduct);
+            await productManager.createProduct(newProduct);
             setNewProduct({ name: '', price: '', description: '', imageUrl: '' });
             fetchProducts();
         } catch (error) {
@@ -45,7 +40,7 @@ const AdminPanel = () => {
     const handleEditProduct = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`${API_URL}/products/${editingProduct.id}`, editingProduct);
+            await productManager.updateProduct(editingProduct.id, editingProduct);
             setEditingProduct(null);
             fetchProducts();
         } catch (error) {
@@ -55,7 +50,7 @@ const AdminPanel = () => {
 
     const handleDeleteProduct = async (id) => {
         try {
-            await axios.delete(`${API_URL}/products/${id}`);
+            await productManager.deleteProduct(id);
             fetchProducts();
         } catch (error) {
             console.error('Помилка при видаленні продукту', error);
