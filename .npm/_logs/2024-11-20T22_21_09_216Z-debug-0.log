@@ -8,3 +8,4 @@
 7 verbose argv "init" "--yes"
 8 verbose logfile logs-max:10 dir:/home/user/.npm/_logs/2024-11-20T22_21_09_216Z-
 9 verbose logfile /home/user/.npm/_logs/2024-11-20T22_21_09_216Z-debug-0.log
+10 silly logfile done cleaning log files
