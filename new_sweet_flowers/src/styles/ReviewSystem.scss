@@ -1,0 +1,91 @@
+@import 'variables';
+
+.review-system {
+  background-color: $secondary-color;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  .average-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    p {
+      margin-right: 10px;
+    }
+
+    .star {
+      color: #ccc;
+      font-size: 24px;
+
+      &.filled {
+        color: $accent-color;
+      }
+    }
+  }
+
+  form {
+    margin-bottom: 30px;
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .reviews-list {
+    .review {
+      background-color: white;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      p {
+        margin: 5px 0;
+      }
+
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@keyframes reviewAdd {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.review-enter {
+  animation: reviewAdd 0.5s ease-out;
+}
