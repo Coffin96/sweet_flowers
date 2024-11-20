@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const initDatabase = require('./db/init');
 const Product = require('./db/models/Product');
 const User = require('./db/models/User');
+const { Order, OrderItem } = require('./db/models/Order');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -35,112 +36,67 @@ const authenticateJWT = (req, res, next) => {
     }
 };
 
-// Маршрут для реєстрації
-app.post('/api/register', async (req, res) => {
+// ... (попередній код залишається без змін)
+
+// API маршрути для замовлень
+
+// Створити нове замовлення
+app.post('/api/orders', async (req, res) => {
     try {
-        const user = await User.create(req.body);
-        res.status(201).json({ message: 'User created successfully' });
-    } catch (error) {
-        res.status(400).json({ error: 'Error creating user' });
-    }
-});
-
-// Маршрут для входу
-app.post('/api/login', async (req, res) => {
-    const { username, password } = req.body;
-    const user = await User.findOne({ where: { username } });
-
-    if (user && await user.validatePassword(password)) {
-        const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
-        res.json({ token });
-    } else {
-        res.status(400).json({ error: 'Invalid credentials' });
-    }
-});
-
-// Захищені маршрути для адмін-панелі
-app.use('/api/admin', authenticateJWT);
-
-// API маршрути
-
-// Отримати всі продукти з пагінацією
-app.get('/api/products', async (req, res) => {
-    try {
-        const page = parseInt(req.query.page) || 1;
-        const limit = parseInt(req.query.limit) || 10;
-        const offset = (page - 1) * limit;
-
-        const { count, rows } = await Product.findAndCountAll({
-            limit: limit,
-            offset: offset,
-            order: [['createdAt', 'DESC']]
+        const { customerName, customerEmail, customerPhone, items } = req.body;
+        
+        const order = await Order.create({
+            customerName,
+            customerEmail,
+            customerPhone,
+            totalAmount: items.reduce((sum, item) => sum + item.price * item.quantity, 0)
         });
 
-        res.json({
-            products: rows,
-            currentPage: page,
-            totalPages: Math.ceil(count / limit),
-            totalItems: count
-        });
-    } catch (error) {
-        res.status(500).json({ error: 'Error fetching products' });
-    }
-});
-
-// Отримати продукт за ID
-app.get('/api/products/:id', async (req, res) => {
-    try {
-        const product = await Product.findByPk(req.params.id);
-        if (product) {
-            res.json(product);
-        } else {
-            res.status(404).json({ error: 'Product not found' });
+        for (const item of items) {
+            await OrderItem.create({
+                OrderId: order.id,
+                ProductId: item.productId,
+                quantity: item.quantity,
+                price: item.price
+            });
         }
+
+        res.status(201).json(order);
     } catch (error) {
-        res.status(500).json({ error: 'Error fetching product' });
+        console.error('Error creating order', error);
+        res.status(400).json({ error: 'Error creating order' });
     }
 });
 
-// Створити новий продукт (захищений маршрут)
-app.post('/api/admin/products', async (req, res) => {
+// Отримати всі замовлення (тільки для адміністратора)
+app.get('/api/admin/orders', authenticateJWT, async (req, res) => {
     try {
-        const product = await Product.create(req.body);
-        res.status(201).json(product);
+        const orders = await Order.findAll({
+            include: [{ model: OrderItem, include: [Product] }]
+        });
+        res.json(orders);
     } catch (error) {
-        res.status(400).json({ error: 'Error creating product' });
+        console.error('Error fetching orders', error);
+        res.status(500).json({ error: 'Error fetching orders' });
     }
 });
 
-// Оновити продукт (захищений маршрут)
-app.put('/api/admin/products/:id', async (req, res) => {
+// Оновити статус замовлення (тільки для адміністратора)
+app.put('/api/admin/orders/:id', authenticateJWT, async (req, res) => {
     try {
-        const [updated] = await Product.update(req.body, {
+        const { status } = req.body;
+        const [updated] = await Order.update({ status }, {
             where: { id: req.params.id }
         });
         if (updated) {
-            const updatedProduct = await Product.findByPk(req.params.id);
-            res.json(updatedProduct);
+            const updatedOrder = await Order.findByPk(req.params.id);
+            res.json(updatedOrder);
         } else {
-            res.status(404).json({ error: 'Product not found' });
+            res.status(404).json({ error: 'Order not found' });
         }
     } catch (error) {
-        res.status(400).json({ error: 'Error updating product' });
-    }
-});
-
-// Видалити продукт (захищений маршрут)
-app.delete('/api/admin/products/:id', async (req, res) => {
-    try {
-        const deleted = await Product.destroy({
-            where: { id: req.params.id }
-        });
-        if (deleted) {
-            res.status(204).send();
-        } else {
-            res.status(404).json({ error: 'Product not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ error: 'Error deleting product' });
+        console.error('Error updating order', error);
+        res.status(400).json({ error: 'Error updating order' });
     }
 });
 
