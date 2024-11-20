@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/OrderForm.scss';
 
-const OrderForm = ({ cart, onOrderComplete }) => {
+const OrderForm = ({ cart, onOrderComplete, showToast }) => {
     const [formData, setFormData] = useState({
         customerName: '',
         customerEmail: '',
@@ -27,8 +27,10 @@ const OrderForm = ({ cart, onOrderComplete }) => {
             const response = await axios.post('http://localhost:3001/api/orders', orderData);
             console.log('Order created:', response.data);
             onOrderComplete();
+            showToast('Замовлення успішно оформлено', 'success');
         } catch (error) {
             console.error('Error creating order:', error);
+            showToast('Помилка при оформленні замовлення', 'error');
         }
     };
 
