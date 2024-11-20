@@ -1,0 +1,51 @@
+@import 'variables';
+
+.cart {
+  background-color: $secondary-color;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .total {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+  }
+
+  .checkout-button {
+    background-color: $accent-color;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
