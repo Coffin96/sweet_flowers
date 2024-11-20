@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import '../styles/OrderForm.scss';
+
+const API_URL = 'https://api.example.com'; // Замініть на URL вашого API
 
 const OrderForm = ({ cart }) => {
     const [formData, setFormData] = useState({
@@ -8,17 +11,26 @@ const OrderForm = ({ cart }) => {
         phone: '',
         address: ''
     });
+    const [orderStatus, setOrderStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Тут би ми відправляли дані замовлення на сервер
-        console.log('Замовлення відправлено:', { ...formData, cart });
-        // Очистити форму після відправки
-        setFormData({ name: '', email: '', phone: '', address: '' });
+        try {
+            const response = await axios.post(`${API_URL}/orders`, {
+                ...formData,
+                items: cart.map(item => ({ id: item.id, quantity: 1 })),
+                totalPrice: cart.reduce((sum, item) => sum + item.price, 0)
+            });
+            setOrderStatus('success');
+            setFormData({ name: '', email: '', phone: '', address: '' });
+        } catch (error) {
+            console.error('Помилка при оформленні замовлення', error);
+            setOrderStatus('error');
+        }
     };
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
@@ -26,6 +38,12 @@ const OrderForm = ({ cart }) => {
     return (
         <div className="order-form">
             <h3>Оформлення замовлення</h3>
+            {orderStatus === 'success' && (
+                <div className="order-success">Ваше замовлення успішно оформлено!</div>
+            )}
+            {orderStatus === 'error' && (
+                <div className="order-error">Виникла помилка при оформленні замовлення. Спробуйте ще раз.</div>
+            )}
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
