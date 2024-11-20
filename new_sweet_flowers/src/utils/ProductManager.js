@@ -1,31 +1,25 @@
 import axios from 'axios';
 
-export default class ProductManager {
-    constructor() {
-        this.products = [];
-    }
+const API_URL = 'https://api.example.com'; // Замініть на URL вашого API
 
+export default class ProductManager {
     async fetchProducts() {
         try {
-            // В реальному проекті тут був би запит до API
-            // const response = await axios.get('/api/products');
-            // this.products = response.data;
-
-            // Для прикладу використаємо моковані дані
-            this.products = [
-                { id: 1, name: 'Букет "Рожева мрія"', price: 500, imageUrl: '/images/bouquet1.jpg', description: 'Ніжний букет з рожевих зефірних квітів' },
-                { id: 2, name: 'Букет "Ніжність"', price: 450, imageUrl: '/images/bouquet2.jpg', description: 'Елегантний букет з білих та рожевих зефірних квітів' },
-                { id: 3, name: 'Букет "Святковий"', price: 600, imageUrl: '/images/bouquet3.jpg', description: 'Яскравий букет з різнокольорових зефірних квітів' },
-            ];
-
-            return this.products;
+            const response = await axios.get(`${API_URL}/products`);
+            return response.data;
         } catch (error) {
             console.error('Помилка при завантаженні продуктів', error);
             return [];
         }
     }
 
-    getProductById(id) {
-        return this.products.find(product => product.id === id);
+    async getProductById(id) {
+        try {
+            const response = await axios.get(`${API_URL}/products/${id}`);
+            return response.data;
+        } catch (error) {
+            console.error(`Помилка при завантаженні продукту з id ${id}`, error);
+            return null;
+        }
     }
 }
