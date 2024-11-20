@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import ProductManager from '../utils/ProductManager';
 import '../styles/AdminPanel.scss';
 
 const AdminPanel = () => {
     const [products, setProducts] = useState([]);
     const [newProduct, setNewProduct] = useState({ name: '', price: '', description: '', imageUrl: '' });
     const [editingProduct, setEditingProduct] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const productManager = new ProductManager();
 
     useEffect(() => {
         fetchProducts();
-    }, []);
+    }, [currentPage]);
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/api/products');
-            setProducts(response.data);
+            const response = await productManager.fetchProducts(currentPage);
+            setProducts(response.products);
+            setTotalPages(response.totalPages);
         } catch (error) {
             console.error('Error fetching products', error);
         }
@@ -32,10 +36,7 @@ const AdminPanel = () => {
     const handleAddProduct = async (e) => {
         e.preventDefault();
         try {
-            const token = localStorage.getItem('token');
-            await axios.post('http://localhost:3001/api/admin/products', newProduct, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            await productManager.createProduct(newProduct);
             setNewProduct({ name: '', price: '', description: '', imageUrl: '' });
             fetchProducts();
         } catch (error) {
@@ -46,10 +47,7 @@ const AdminPanel = () => {
     const handleEditProduct = async (e) => {
         e.preventDefault();
         try {
-            const token = localStorage.getItem('token');
-            await axios.put(`http://localhost:3001/api/admin/products/${editingProduct.id}`, editingProduct, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            await productManager.updateProduct(editingProduct.id, editingProduct);
             setEditingProduct(null);
             fetchProducts();
         } catch (error) {
@@ -59,14 +57,15 @@ const AdminPanel = () => {
 
     const handleDeleteProduct = async (id) => {
         try {
-            const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:3001/api/admin/products/${id}`, {
-                headers: { Authorization: `Bearer ${token}` }
-            });
+            await productManager.deleteProduct(id);
             fetchProducts();
         } catch (error) {
             console.error('Error deleting product', error);
         }
+    };
+
+    const handlePageChange = (newPage) => {
+        setCurrentPage(newPage);
     };
 
     return (
@@ -154,6 +153,17 @@ const AdminPanel = () => {
                             </>
                         )}
                     </div>
+                ))}
+            </div>
+            <div className="pagination">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                        key={page}
+                        onClick={() => handlePageChange(page)}
+                        className={currentPage === page ? 'active' : ''}
+                    >
+                        {page}
+                    </button>
                 ))}
             </div>
         </div>
