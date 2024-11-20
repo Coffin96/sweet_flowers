@@ -1042,3 +1042,49 @@
 203 silly packumentCache corgi:https://registry.npmjs.org/selfsigned cache-miss
 204 http fetch GET 200 https://registry.npmjs.org/selfsigned 39ms (cache revalidated)
 205 silly packumentCache corgi:https://registry.npmjs.org/selfsigned set size:31119 disposed:false
+206 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns cache-miss
+207 http fetch GET 200 https://registry.npmjs.org/multicast-dns 33ms (cache revalidated)
+208 silly packumentCache corgi:https://registry.npmjs.org/multicast-dns set size:33661 disposed:false
+209 silly packumentCache corgi:https://registry.npmjs.org/bonjour cache-miss
+210 http fetch GET 200 https://registry.npmjs.org/bonjour 36ms (cache revalidated)
+211 silly packumentCache corgi:https://registry.npmjs.org/bonjour set size:8131 disposed:false
+212 http fetch GET 200 https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz 1435ms (cache miss)
+213 silly ADD node_modules/tree-kill
+214 silly ADD node_modules/shell-quote
+215 silly ADD node_modules/rxjs
+216 silly ADD node_modules/chalk
+217 silly ADD node_modules/chalk/node_modules/color-name
+218 silly ADD node_modules/chalk/node_modules/color-convert
+219 silly ADD node_modules/chalk/node_modules/supports-color
+220 silly ADD node_modules/chalk/node_modules/ansi-styles
+221 silly ADD node_modules/concurrently
+222 silly ADD node_modules/concurrently/node_modules/color-name
+223 silly ADD node_modules/concurrently/node_modules/color-convert
+224 silly ADD node_modules/concurrently/node_modules/ansi-styles
+225 silly ADD node_modules/concurrently/node_modules/is-fullwidth-code-point
+226 silly ADD node_modules/concurrently/node_modules/emoji-regex
+227 silly ADD node_modules/concurrently/node_modules/wrap-ansi
+228 silly ADD node_modules/concurrently/node_modules/yargs-parser
+229 silly ADD node_modules/concurrently/node_modules/y18n
+230 silly ADD node_modules/concurrently/node_modules/string-width
+231 silly ADD node_modules/concurrently/node_modules/cliui
+232 silly ADD node_modules/concurrently/node_modules/yargs
+233 silly ADD
+234 silly ADD
+235 silly ADD
+236 silly ADD
+237 silly ADD
+238 silly ADD
+239 silly ADD
+240 silly ADD
+241 silly ADD
+242 silly ADD
+243 silly ADD
+244 silly ADD
+245 silly ADD
+246 verbose cwd /home/user/new_sweet_flowers
+247 verbose os Linux 5.10.186+
+248 verbose node v20.18.0
+249 verbose npm  v10.8.2
+250 verbose exit 0
+251 info ok
