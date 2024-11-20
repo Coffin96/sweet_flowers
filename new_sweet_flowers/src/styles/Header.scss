@@ -1,0 +1,45 @@
+@import 'variables';
+
+header {
+  background-color: $primary-color;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}
