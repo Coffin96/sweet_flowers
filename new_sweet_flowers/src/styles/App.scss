@@ -1,115 +1,28 @@
 @import 'variables';
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: $background-color;
-  color: $text-color;
-  line-height: 1.6;
-}
-
-.app-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  background-color: $primary-color;
-  color: white;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    ul {
-      list-style-type: none;
-      display: flex;
-
-      li {
-        margin-left: 20px;
-
-        a {
-          color: white;
-          text-decoration: none;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: $accent-color;
-          }
-        }
-      }
-    }
-  }
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-  margin-top: 40px;
+  flex: 1;
+  padding: 40px 0;
 }
 
-section {
-  background-color: white;
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-  h2 {
-    color: $primary-color;
-    margin-bottom: 20px;
-  }
-}
-
-footer {
-  background-color: $primary-color;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-.button {
-  background-color: $accent-color;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: darken($accent-color, 10%);
-  }
-}
-
-.form-group {
-  margin-bottom: 20px;
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid $primary-color;
-    border-radius: 5px;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
-  .app-container {
-    padding: 10px;
+  main {
+    padding: 20px 0;
   }
 
-  header nav {
-    flex-direction: column;
-
-    ul {
-      margin-top: 20px;
-    }
+  .container {
+    padding: 0 15px;
   }
 }
