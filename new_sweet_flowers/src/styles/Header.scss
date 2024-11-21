@@ -2,42 +2,75 @@
 
 header {
   background-color: $primary-color;
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  nav {
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 20px;
+  }
 
-    .logo {
+  .logo {
+    a {
+      color: white;
       font-size: 24px;
       font-weight: bold;
-      color: white;
-    }
+      text-decoration: none;
+      transition: color 0.3s ease;
 
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  nav {
     ul {
-      display: flex;
       list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
 
       li {
         margin-left: 20px;
 
-        a {
+        a, button {
           color: white;
           text-decoration: none;
-          font-weight: bold;
+          font-size: 16px;
           transition: color 0.3s ease;
+          background: none;
+          border: none;
+          cursor: pointer;
 
           &:hover {
             color: $accent-color;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .header-content {
+      flex-direction: column;
+    }
+
+    nav {
+      margin-top: 15px;
+
+      ul {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+          margin: 5px 10px;
         }
       }
     }
