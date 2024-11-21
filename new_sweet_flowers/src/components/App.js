@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import ProductList from './ProductList';
@@ -10,6 +10,7 @@ import AdminPanel from './AdminPanel';
 import Login from './Login';
 import Toast from './Toast';
 import ProductManager from '../utils/ProductManager';
+import '../styles/global.scss';
 import '../styles/App.scss';
 
 function App() {
@@ -63,9 +64,9 @@ function App() {
 
     return (
         <Router>
-            <div className="app-container">
+            <div className="app">
                 <Header isAuthenticated={isAuthenticated} onLogout={handleLogout} />
-                <main>
+                <main className="container">
                     <Switch>
                         <Route exact path="/">
                             <ProductList 
@@ -78,10 +79,14 @@ function App() {
                             <Cart items={cart} />
                         </Route>
                         <Route path="/order">
-                            <OrderForm cart={cart} />
+                            <OrderForm cart={cart} onOrderComplete={() => setCart([])} />
                         </Route>
                         <Route path="/admin">
-                            {isAuthenticated ? <AdminPanel /> : <Login setIsAuthenticated={setIsAuthenticated} />}
+                            {isAuthenticated ? (
+                                <AdminPanel showToast={showToast} />
+                            ) : (
+                                <Login setIsAuthenticated={setIsAuthenticated} showToast={showToast} />
+                            )}
                         </Route>
                     </Switch>
                 </main>
